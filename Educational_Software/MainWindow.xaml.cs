@@ -1,8 +1,14 @@
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Threading.Tasks;
+using Educational_Software.Navigation_UI_Pages;
+using Microsoft.UI;
 using Microsoft.UI.Windowing;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
@@ -11,6 +17,8 @@ using Microsoft.UI.Xaml.Data;
 using Microsoft.UI.Xaml.Input;
 using Microsoft.UI.Xaml.Media;
 using Microsoft.UI.Xaml.Navigation;
+using Windows.Devices.Display;
+using Windows.Devices.Enumeration;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.Graphics;
@@ -20,24 +28,187 @@ using Windows.Graphics;
 
 namespace Educational_Software
 {
-    /// <summary>
-    /// An empty window that can be used on its own or navigated to within a Frame.
-    /// </summary>
+    
     public sealed partial class MainWindow : Window
     {
+        // Attributes for Windowing - Start
+
+        IntPtr hWnd = IntPtr.Zero;
+        private SUBCLASSPROC SubClassDelegate;
+
+        int width = 450;
+        int height = 400;
+
+        [DllImport("dwmapi.dll", PreserveSig = true)]
+        public static extern int DwmSetWindowAttribute(IntPtr hwnd, int attr, ref bool attrValue, int attrSize);
+
+        // Attributes for Windowing - End
+
+        bool logged_in = false;
+
+
         public MainWindow()
         {
+            hWnd = WinRT.Interop.WindowNative.GetWindowHandle(this);
+
+            SizeWindow();
+
             this.InitializeComponent();
             this.SystemBackdrop = new MicaBackdrop();
             ExtendsContentIntoTitleBar = true;
 
+            AppWindow.Title = "Educational Software";
+            AppWindow.SetIcon("Assets/light_house.ico");
+
         }
 
-      
-
-        private void myButton_Click(object sender, RoutedEventArgs e)
+        private void Log_in(object sender, RoutedEventArgs e)
         {
-            myButton.Content = "Clicked";
+            welcome_screen.Visibility = Visibility.Collapsed;
+            main_screen.Visibility = Visibility.Visible;
+            sign_out_button.Visibility = Visibility.Visible;
+
+            logged_in = true;
+
+        }
+
+        private void Sign_out(object sender, RoutedEventArgs e)
+        {
+
+            chapter_1_nav.IsExpanded = false;
+            chapter_2_nav.IsExpanded = false;
+            chapter_3_nav.IsExpanded = false;
+
+            sign_out_button.Visibility = Visibility.Collapsed;
+            main_screen.Visibility = Visibility.Collapsed;
+            welcome_screen.Visibility = Visibility.Visible;
+
+            logged_in = false;
+
+            navigation_element.SelectedItem = navigation_element.MenuItems[0];
+            
+        }
+
+        private void Sign_up_semi(object sender, RoutedEventArgs e)
+        {
+            sign_up_1.Visibility = Visibility.Collapsed;
+            sign_up_2.Visibility = Visibility.Visible;
+
+        }
+
+        private void Sign_up(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+
+        // Methods for Window Resize - Start //
+
+        private async Task SizeWindow()
+        {
+            var displayList = await DeviceInformation.FindAllAsync
+                              (DisplayMonitor.GetDeviceSelector());
+
+            if (!displayList.Any())
+                return;
+
+            var monitorInfo = await DisplayMonitor.FromInterfaceIdAsync(displayList[0].Id);
+
+
+
+            if (monitorInfo == null)
+            {
+                width = 450;
+                height = 400;
+                SubClassDelegate = new SUBCLASSPROC(WindowSubClass);
+                bool bReturn = SetWindowSubclass(hWnd, SubClassDelegate, 0, 0);
+
+            }
+            else
+            {
+                double dheight = monitorInfo.NativeResolutionInRawPixels.Height / 1.5;
+                double dwidth = monitorInfo.NativeResolutionInRawPixels.Width / 1.4;
+
+                height = (int)dheight;
+                width = (int)dwidth;
+                SubClassDelegate = new SUBCLASSPROC(WindowSubClass);
+                bool bReturn = SetWindowSubclass(hWnd, SubClassDelegate, 0, 0);
+
+            }
+        }
+
+        private int WindowSubClass(IntPtr hWnd, uint uMsg, IntPtr wParam, IntPtr lParam, IntPtr uIdSubclass, uint dwRefData)
+        {
+            switch (uMsg)
+            {
+                case WM_GETMINMAXINFO:
+                    {
+                        MINMAXINFO mmi = (MINMAXINFO)Marshal.PtrToStructure(lParam, typeof(MINMAXINFO));
+                        mmi.ptMinTrackSize.X = width;
+                        mmi.ptMinTrackSize.Y = height;
+                        Marshal.StructureToPtr(mmi, lParam, false);
+                        return 0;
+                    }
+                    break;
+            }
+            return DefSubclassProc(hWnd, uMsg, wParam, lParam);
+        }
+
+        public delegate int SUBCLASSPROC(IntPtr hWnd, uint uMsg, IntPtr wParam, IntPtr lParam, IntPtr uIdSubclass, uint dwRefData);
+
+        [DllImport("Comctl32.dll", SetLastError = true)]
+        public static extern bool SetWindowSubclass(IntPtr hWnd, SUBCLASSPROC pfnSubclass, uint uIdSubclass, uint dwRefData);
+
+        [DllImport("Comctl32.dll", SetLastError = true)]
+        public static extern int DefSubclassProc(IntPtr hWnd, uint uMsg, IntPtr wParam, IntPtr lParam);
+
+        public const int WM_GETMINMAXINFO = 0x0024;
+
+        public struct MINMAXINFO
+        {
+            public System.Drawing.Point ptReserved;
+            public System.Drawing.Point ptMaxSize;
+            public System.Drawing.Point ptMaxPosition;
+            public System.Drawing.Point ptMinTrackSize;
+            public System.Drawing.Point ptMaxTrackSize;
+        }
+
+        // Methods for Window Resize - End //
+
+        private void nv_SelectionChanged(NavigationView sender, NavigationViewSelectionChangedEventArgs args)
+        {
+            if (args.IsSettingsSelected)
+            {
+                //Nothing to do here
+            }
+            else if (args.SelectedItem != null)
+            {
+
+                NavigationViewItem item = args.SelectedItem as NavigationViewItem;
+
+
+                if (item != null && item.Tag != null)
+                {
+                    string selectedTag = item.Tag.ToString();
+                    switch (selectedTag)
+                    {
+                        case "start":
+                            if (logged_in)
+                            {
+                                //contentFrame.Navigate(typeof(Home), null);
+                            }
+                            else
+                            {
+                                //contentFrame.Navigate(typeof(Home), null, new Microsoft.UI.Xaml.Media.Animation.SuppressNavigationTransitionInfo());
+                            }
+                            break;
+                        case "edu_1":
+                            //contentFrame.Navigate(typeof(Edu_1));
+                            break;
+
+                    }
+                }
+            }
         }
     }
 }
