@@ -46,6 +46,7 @@ namespace Educational_Software
 
         bool logged_in = false;
 
+
         public MainWindow()
         {
             hWnd = WinRT.Interop.WindowNative.GetWindowHandle(this);
