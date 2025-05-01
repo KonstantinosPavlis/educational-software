@@ -1,25 +1,217 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Window
-    x:Class="Educational_Software.MainWindow"
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:Educational_Software"
-    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d"
-    Title="Educational_Software">
+<Window  
+  x:Class="Educational_Software.MainWindow"  
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"  
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"  
+  xmlns:local="using:Educational_Software"  
+  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"  
+  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"  
+  mc:Ignorable="d"  
+  Title="Educational_Software">  
 
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
+  <Grid>  
+      <Grid.RowDefinitions>  
+          <RowDefinition Height="Auto"/>  
+          <RowDefinition Height="*"/>  
+      </Grid.RowDefinitions>
 
-        <TitleBar Title="Educational Software" Subtitle="PREVIEW"/>
-
-        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <Button x:Name="myButton" Click="myButton_Click">Click Me</Button>
+        <StackPanel  Grid.Row="0" Orientation="Horizontal" Visibility="Visible" Spacing="15" Height="30"  x:Name="TitleBar" HorizontalAlignment="Stretch"  VerticalAlignment="Top" Margin="0, 0, 0, 2">
+            <ImageIcon Height="18" Width="18" Margin="15, 0, 0, 0" VerticalAlignment="Center" HorizontalAlignment="Center" Source="Assets/light_house.png"/>
+            <TextBlock VerticalAlignment="Center" Text="Educational Software" />
+            <TextBlock Visibility="Visible" VerticalAlignment="Center" Text="PREVIEW" Foreground="Gray" />
         </StackPanel>
 
-    </Grid>
+        <!-- Welcome Screen Grid  -->
+      
+        <Grid Grid.Row="1" Visibility="Visible" x:Name="welcome_screen">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Row="0" Grid.ColumnSpan="3" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0, 0, 0, 20">
+                <Image Source="Assets/light_house.png" HorizontalAlignment="Center" Height="100" Width="100" Margin="0, 10, 0, 5"/>
+                <TextBlock Text="The Exploration of Alexandroupolis" HorizontalAlignment="Center" FontSize="35" FontWeight="SemiBold" />
+                <TextBlock Text="Ανακαλύψτε τον πολιτισμό και τις παραδόσεις" HorizontalAlignment="Center" FontSize="22" Margin="0, 5, 0, 0"/>
+            </StackPanel>
+
+
+            <ScrollViewer Grid.Row="1" Grid.Column="0" ZoomMode="Disabled"  
+                IsTabStop="True" IsVerticalScrollChainingEnabled="True"  
+                HorizontalAlignment="Center" VerticalAlignment="Center"  
+                HorizontalScrollMode="Enabled" HorizontalScrollBarVisibility="Auto"  
+                VerticalScrollMode="Enabled" VerticalScrollBarVisibility="Auto">
+
+                <StackPanel Orientation="Vertical" Spacing="6" Margin="0, 10, 0 ,0" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <TextBlock Text="Σύνδεση" FontSize="25" FontWeight="SemiBold" HorizontalAlignment="Center" Margin="0,0,0, 0"/>
+                    <FontIcon Glyph="&#xE716;" HorizontalAlignment="Center" FontSize="50" Margin="0,20,0, 20"/>
+                    <TextBlock  Text="Ψευδώνυμο"/>
+                    <TextBox x:Name="username_sign_in" Width="300"/>
+                    <TextBlock Text="Κωδικός" Margin="0, 5, 0,0"/>
+                    <PasswordBox  x:Name="password_sign_in" Width="300"/>
+                    <Button HorizontalAlignment="Center" Click="Log_in" Margin="0, 25, 0 ,20" Style="{StaticResource AccentButtonStyle}">
+                        
+                         
+                         <TextBlock Text="Σύνδεση" FontSize="15"/>
+                       
+                    </Button>
+                </StackPanel>
+
+            </ScrollViewer>
+
+            <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Vertical" VerticalAlignment="Center">
+                <Image Source="Assets/line.png" Width="50" Height="150" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                <TextBlock Text="ή" TextAlignment="Center" FontSize="30" FontWeight="SemiBold"/>
+                <Image Source="Assets/line.png" Width="50" Height="150" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            </StackPanel>
+
+            <ScrollViewer Grid.Row="1" Grid.Column="2" ZoomMode="Disabled"  
+                IsTabStop="True" IsVerticalScrollChainingEnabled="True"  
+                HorizontalAlignment="Center" VerticalAlignment="Center"  
+                HorizontalScrollMode="Enabled" HorizontalScrollBarVisibility="Auto"  
+                VerticalScrollMode="Enabled" VerticalScrollBarVisibility="Auto">
+
+                <StackPanel Orientation="Vertical">
+
+                    <TextBlock Text="Εγγραφή" FontSize="25" FontWeight="SemiBold" TextAlignment="Center" Margin="0,0,0, 0" Width="300"/>
+                    <FontIcon Glyph="&#xE70F;" HorizontalAlignment="Center" FontSize="40" Margin="0,20,0, 10"/>
+
+
+                    <StackPanel x:Name="sign_up_1" Visibility="Visible" Orientation="Vertical" HorizontalAlignment="Center" Spacing="6" Margin="0, 10, 15 ,0">
+
+                        <!-- <TextBlock Text="Συμπληρώστε όλα τα πεδία" FontWeight="SemiBold" HorizontalAlignment="Center" Margin="0,0,0, 15"/> -->
+                        <TextBlock Text="Email" Margin="0, 10, 0,0" Width="300"/>
+                        <TextBox x:Name="email_obj" />
+                        <TextBlock Text="Όνομα" Margin="0, 10, 0,0"/>
+                        <TextBox x:Name="name_obj"/>
+                        <TextBlock Text="Επώνυμο" Margin="0, 10, 0,0"/>
+                        <TextBox x:Name="surname_obj"/>
+                        <TextBlock Text="Κωδικός" Margin="0, 10, 0,0" />
+                        <PasswordBox x:Name="password_obj"/>
+
+
+                    </StackPanel>
+
+                    <StackPanel x:Name="sign_up_2" Visibility="Collapsed" Orientation="Vertical" HorizontalAlignment="Center" Spacing="6" Margin="0, 10, 15 ,0">
+
+                        <!-- Continue of the login process -->
+                        <TextBlock Text="Η συνέχεια του Sign Up"/>
+
+
+                    </StackPanel>
+
+                    <Button HorizontalAlignment="Center" Click="Sign_up_semi"  Margin="0, 25, 0 ,10">
+                       
+                            <TextBlock Text="Συνέχεια" FontSize="15"/>
+                        
+                    </Button>
+                </StackPanel>
+            </ScrollViewer>
+        </Grid>
+
+        <!-- End of Welcome Screen Grid  -->
+      
+        <!-- Main App Content-->
+
+        <Grid Grid.Row="1" Visibility="Collapsed" x:Name="main_screen">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+
+            <Button x:Name="sign_out_button" Visibility="Collapsed" Content="Αποσύνδεση" Margin="0, 0, 17, 7" Height="30" FontSize="12" FontWeight="SemiBold" Click="Sign_out" HorizontalAlignment="Right"/>
+                
+
+            <NavigationView x:Name="navigation_element" SelectionChanged="nv_SelectionChanged" Grid.Row="1" IsBackButtonVisible="Collapsed" IsSettingsVisible="False" IsPaneVisible="True" >
+                <NavigationView.MenuItems>
+                    
+                    <NavigationViewItem x:Name="home_nav" Icon="Home" Content="Αρχική" Tag="start" IsSelected="True"/>
+                    
+                    <NavigationViewItem x:Name="chapter_1_nav" Content="Ενότητα 1 (Πολιτισμός)" Icon="Page2" SelectsOnInvoked="False">
+                        <NavigationViewItem.MenuItems>
+                            <NavigationViewItem Content="Ο Φάρος" Tag="edu_1" >
+                                <NavigationViewItem.Icon>
+                                    <FontIcon Glyph="&#xE82D;"/>
+                                </NavigationViewItem.Icon>
+                            </NavigationViewItem>
+                            <NavigationViewItem Content="Quiz 1" Tag="quiz_1" >
+                                <NavigationViewItem.Icon>
+                                    <FontIcon Glyph="&#xE734;"/>
+                                </NavigationViewItem.Icon>
+                            </NavigationViewItem>
+                        </NavigationViewItem.MenuItems>
+                    </NavigationViewItem>
+
+                    <NavigationViewItem x:Name="chapter_2_nav" Content="Ενότητα 2 (Πολιτισμός)" Icon="Page2" SelectsOnInvoked="False">
+                        <NavigationViewItem.MenuItems>
+                            <NavigationViewItem Content="Η Αρχαία Πόλη" Tag="edu_2" >
+                                <NavigationViewItem.Icon>
+                                    <FontIcon Glyph="&#xE82D;"/>
+                                </NavigationViewItem.Icon>
+                            </NavigationViewItem>
+                            <NavigationViewItem Content="Quiz 2" Tag="quiz_2" >
+                                <NavigationViewItem.Icon>
+                                    <FontIcon Glyph="&#xE734;"/>
+                                </NavigationViewItem.Icon>
+                            </NavigationViewItem>
+                        </NavigationViewItem.MenuItems>
+                    </NavigationViewItem>
+
+                    <NavigationViewItem x:Name="chapter_3_nav" Content="Ενότητα 3 (Παραδόσεις)" Icon="Page2" SelectsOnInvoked="False" >
+                        <NavigationViewItem.MenuItems>
+                            <NavigationViewItem Content="Έθιμα" Tag="edu_3" >
+                                <NavigationViewItem.Icon>
+                                    <FontIcon Glyph="&#xE82D;"/>
+                                </NavigationViewItem.Icon>
+                            </NavigationViewItem>
+                            <NavigationViewItem Content="Quiz 3" Tag="quiz_3" >
+                                <NavigationViewItem.Icon>
+                                    <FontIcon Glyph="&#xE734;"/>
+                                </NavigationViewItem.Icon>
+                            </NavigationViewItem>
+                        </NavigationViewItem.MenuItems>
+                    </NavigationViewItem>
+
+
+                </NavigationView.MenuItems>
+
+
+
+                <NavigationView.FooterMenuItems>
+                    <NavigationViewItem Content="Σχετικά με την εφαρμογή" Tag="settings">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xF167;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+                </NavigationView.FooterMenuItems>
+
+                <Frame x:Name="contentFrame">
+                    <StackPanel Orientation="Vertical" VerticalAlignment="Center" Spacing="20">
+                        <Image Source="/Assets/light_house.png" HorizontalAlignment="Center" VerticalAlignment="Center" Height="150" Width="150"/>
+                        <TextBlock Text="...the UI is a work in progress !" FontSize="25" FontWeight="SemiBold" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                </Frame>
+            </NavigationView>
+
+            <TeachingTip x:Name="TeachingTip" x:FieldModifier="internal"
+                   Title="Αποτυχία σύνδεσης"
+                   Subtitle="Το Username ή/και το Password είναι λανθασμένα. Προσπάθησε ξανά !"
+                   HorizontalContentAlignment="Center"
+                   PreferredPlacement="Auto"
+                   PlacementMargin="20"
+                   IsLightDismissEnabled="True"
+                   CloseButtonContent="ΟΚ"
+                   Grid.Row="1"
+                   />
+        </Grid>
+
+        <!-- End of Main App Content-->
+
+    </Grid>  
 </Window>
