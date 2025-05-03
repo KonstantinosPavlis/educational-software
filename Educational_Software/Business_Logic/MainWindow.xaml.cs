@@ -50,6 +50,10 @@ namespace Educational_Software
         public MainWindow()
         {
             hWnd = WinRT.Interop.WindowNative.GetWindowHandle(this);
+            var appWindow = AppWindow.GetFromWindowId(Win32Interop.GetWindowIdFromWindow(hWnd));
+
+            TitleBar_Buttons_Appearance(appWindow.TitleBar);
+
 
             SizeWindow();
 
@@ -59,6 +63,8 @@ namespace Educational_Software
 
             AppWindow.Title = "Educational Software";
             AppWindow.SetIcon("Assets/light_house.ico");
+
+
 
         }
 
@@ -175,6 +181,18 @@ namespace Educational_Software
 
         // Methods for Window Resize - End //
 
+        //TitleBar customization
+        private void TitleBar_Buttons_Appearance(AppWindowTitleBar titleBar)
+        {
+            titleBar.ButtonHoverBackgroundColor = Colors.LightGray;
+            titleBar.ButtonPressedBackgroundColor = Colors.LightGray;
+
+            // Set button foreground colors
+            titleBar.ButtonForegroundColor = Colors.Black;
+            titleBar.ButtonHoverForegroundColor = Colors.Black;
+            titleBar.ButtonPressedForegroundColor = Colors.Black;
+        }
+
         private void nv_SelectionChanged(NavigationView sender, NavigationViewSelectionChangedEventArgs args)
         {
             if (args.IsSettingsSelected)
@@ -195,15 +213,15 @@ namespace Educational_Software
                         case "start":
                             if (logged_in)
                             {
-                                //contentFrame.Navigate(typeof(Home), null);
+                                contentFrame.Navigate(typeof(Home), null);
                             }
                             else
                             {
-                                //contentFrame.Navigate(typeof(Home), null, new Microsoft.UI.Xaml.Media.Animation.SuppressNavigationTransitionInfo());
+                                contentFrame.Navigate(typeof(Home), null, new Microsoft.UI.Xaml.Media.Animation.SuppressNavigationTransitionInfo());
                             }
                             break;
                         case "edu_1":
-                            //contentFrame.Navigate(typeof(Edu_1));
+                            contentFrame.Navigate(typeof(Edu_1));
                             break;
 
                     }
