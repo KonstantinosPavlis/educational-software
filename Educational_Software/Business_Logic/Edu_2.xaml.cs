@@ -45,6 +45,7 @@ namespace Educational_Software.Navigation_UI_Pages
             {
                 VideoPlayer.MediaPlayer.Pause();
                 //VideoPlayer.MediaPlayer.PlaybackSession.Position = TimeSpan.Zero;
+                VideoPlayer.MediaPlayer.Dispose();
             }
         }
     }

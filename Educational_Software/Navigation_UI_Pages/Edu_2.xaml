@@ -41,12 +41,16 @@
                 </TextBlock>
 
                 <StackPanel Spacing="5">
-                    <MediaPlayerElement
-                    x:Name="VideoPlayer"
-                    MaxWidth="700"
-                    MaxHeight="400"
-                    AutoPlay="False"
-                    AreTransportControlsEnabled="True" />
+                    <MediaPlayerElement  
+                      x:Name="VideoPlayer"  
+                      MaxWidth="700"  
+                      MaxHeight="400"  
+                      AutoPlay="False"  
+                      AreTransportControlsEnabled="True">
+                      <MediaPlayerElement.TransportControls>
+                           <MediaTransportControls IsCompact="True" />  
+                      </MediaPlayerElement.TransportControls>  
+                    </MediaPlayerElement>
                     <TextBlock Text="Βίντεο" HorizontalAlignment="Center" FontWeight="Light" FontSize="16"/>
                 </StackPanel>
 
