@@ -9,8 +9,91 @@
     mc:Ignorable="d">
 
     <Grid>
-        
-        <TextBlock Text="The LightHouse Page" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25"/>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal" Spacing="15" HorizontalAlignment="Center" Margin="0, 15,0,5">
+            <FontIcon Glyph="&#xE82D;" FontSize="42"/>
+            <TextBlock Text="Ο Φάρος" FontSize="25" FontWeight="SemiBold" VerticalAlignment="Center"/>
+        </StackPanel>
+
+        <ScrollViewer Grid.Row="1" ZoomMode="Disabled"
+            IsTabStop="True" IsVerticalScrollChainingEnabled="True"  
+            HorizontalAlignment="Center" VerticalAlignment="Center"  
+            HorizontalScrollMode="Disabled" HorizontalScrollBarVisibility="Disabled"  
+            VerticalScrollMode="Enabled" VerticalScrollBarVisibility="Auto"
+            Margin="0, 20, 0, 20">
+
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Spacing="20" >
+
+                <Border CornerRadius="12"  Width="360" Height="240">
+                    <Image Source="/Assets/pic_4_edu_1.jpg" Width="380" Height="270"/>
+                </Border>
+
+
+                <TextBlock Text="Γενικά" FontWeight="SemiBold" HorizontalAlignment="Center" FontSize="22" Margin="0, 0, 0, 0"/>
+
+                <TextBlock TextAlignment="Center" FontSize="16" TextWrapping="WrapWholeWords" Margin="50, 0, 50, 0 " >
+                Αξιοθέατο της πόλης είναι ο Φάρος που βρίσκεται στην παραλιακή οδό της πόλης, Βασιλέως Αλεξάνδρου. Κατασκευάστηκε το 1850 και είναι κτισμένος στη δυτική πλευρά του λιμανιού της πόλης, για τη διευκόλυνση της ακτοπλοΐας των ντόπιων ναυτικών που ταξίδευαν στην περιοχή του Ελλησπόντου. Εδράζεται πάνω σε ένα κυλινδρικό βάθρο και απέχει 27 μέτρα από το θαλάσσιο πυθμένα και 18 μέτρα από το έδαφος, αποτελώντας έναν από τους ψηλότερους φάρους της Ελλάδας. Λειτουργεί με ηλεκτρικό ρεύμα και ξεχωριστό χαρακτηριστικό του είναι η φωτεινή του δέσμη που φτάνει σε ακτίνα 24 ναυτικών μιλίων (44 χλμ. περίπου) και σημειώνει τρεις λευκές αναλαμπές κάθε 15 δευτερόλεπτα.
+                </TextBlock>
+
+                <StackPanel Spacing="5">
+                    <FlipView Width="500" Height="300">
+                        <Image Source="/Assets/pic_5_edu_1.jpg" />
+                        <Image Source="/Assets/pic_1_edu_1.jpg" />
+                        <Image Source="/Assets/pic_2_edu_1.jpg"/>
+                        <Image Source="/Assets/pic_3_edu_1.jpeg" />
+                    </FlipView>
+                    <TextBlock Text="Συλλογή Φωτογραφιών" HorizontalAlignment="Center" FontWeight="Light" FontSize="16"/>
+                </StackPanel>
+
+                <TextBlock Text="Ιστορική Πορεία" FontWeight="SemiBold" HorizontalAlignment="Center" FontSize="22" Margin="0, 20, 0, 0"/>
+
+                <TextBlock TextAlignment="Center" FontSize="16" TextWrapping="WrapWholeWords" Margin="50, 0, 50, 0 " >
+                Tα εγκαίνια του φάρου έγιναν την 1η Ιουνίου 1880 και από τότε λειτουργεί χωρίς διακοπή σηματοδοτώντας το χαρακτηριστικό σύμβολο της πόλης της Αλεξανδρούπολης. Τα πρώτα χρόνια λειτουργούσε με ασετιλίνη, μέθοδος που με την πάροδο του χρόνου αντικαταστάθηκε με αυτή του της πυράκτωσης με τη χρήση πετρελαίου. Από το 1974 μέχρι σήμερα λειτουργεί με ηλεκτρικό ρεύμα αλλά διαθέτει και εφεδρικές φιάλες με ασετιλίνη για έκτακτες περιπτώσεις διακοπής της ηλεκτροδότησης. Επισκευές και μετασκευές στην κτιριακή υποδομή του φάρου έγιναν το 1946 και το 1955. Το 2002 αντικαταστάθηκε ο ηλεκτρολογικός του εξοπλισμός με έναν πιο πρόσφατης τεχνολογίας.
+                </TextBlock>
+
+                <StackPanel Orientation="Horizontal" Spacing="15" HorizontalAlignment="Center" Margin="0, 20, 0, 0">
+                    <FontIcon Glyph="&#xE8F2;" FontSize="26" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
+                    <TextBlock Text="Συγκεντρωτικές Πληροφορίες" FontWeight="SemiBold" HorizontalAlignment="Center" FontSize="22" />
+                </StackPanel>
+
+                <Expander
+                 Margin="50, 0, 50, 0"
+                 IsExpanded="False"
+                 ExpandDirection="Down"
+                 HorizontalAlignment="Stretch"
+                 Header="Οι Γεωγραφικές Συντεταγμένες του"
+                 Content="40°50′37″N 25°52′30″E"/>
+
+                <Expander
+                 Margin="50, 0, 50, 0"
+                 IsExpanded="False"
+                 ExpandDirection="Down"
+                 HorizontalAlignment="Stretch"
+                 Header="Το Ύψος και η Ορατότητα του φωτός από μακριά"
+                 Content="Το ύψος του φάρου είναι 18 μέτρα και το φως του είναι ορατό από 24 ναυτικά μίλια μακριά (44χλμ. περίπου)"/>
+
+                <Expander
+                 Margin="50, 0, 50, 0"
+                 IsExpanded="False"
+                 ExpandDirection="Down"
+                 HorizontalAlignment="Stretch"
+                 Header="Ο Ρυθμός Αναλαμπών"
+                 Content="Ο φάρος σημειώνει τρεις λευκές αναλαμπές κάθε 15 δευτερόλεπτα (0,38 + 2,12 + 0,38 + 2,12 +0,38 + 9,62 =15δ)"/>
+
+                <Expander
+                 Margin="50, 0, 50, 40"
+                 IsExpanded="False"
+                 ExpandDirection="Down"
+                 HorizontalAlignment="Stretch"
+                 Header="Ο Τρόπος Λειτουργίας"
+                 Content="Αρχικά με ασετιλίνη, αργότερα με πετρέλαιο και από το 1974 με ηλεκτρικό ρεύμα."/>
+            </StackPanel>
+        </ScrollViewer>
+
+
     </Grid>
 </Page>
