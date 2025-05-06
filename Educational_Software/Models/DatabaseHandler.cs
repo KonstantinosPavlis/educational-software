@@ -17,20 +17,20 @@ namespace Educational_Software.Models
                         "User ( id INTEGER PRIMARY KEY, name TEXT, lastname TEXT, email TEXT, password TEXT )";
             string createTableQuery1 = "CREATE TABLE IF NOT EXISTS " +
                         "Answer ( studentId INTEGER, section INTEGER, question INTEGER, time INTEGER, rating REAL )";
-            executeQuery(connectionString, createTableQuery0);
-            executeQuery(connectionString, createTableQuery1);
+            execute_query(connectionString, createTableQuery0);
+            execute_query(connectionString, createTableQuery1);
         }
 
         public bool add_user(string name, string lastname, string email, string password)
         {
             string insertQuery = $"INSERT INTO User (name, lastname, email, password) VALUES ('{name}', '{lastname}', '{email}', '{password}')";
-            return executeQuery(connectionString, insertQuery);
+            return execute_query(connectionString, insertQuery);
         }
 
         public bool add_answer(int studentId, int section, int question, int time, double rating)
         {
             string insertQuery = $"INSERT INTO Answer (studentId, section, question, time, rating) VALUES ({studentId}, {section}, {question}, {time}, {rating})";
-            return executeQuery(connectionString, insertQuery);
+            return execute_query(connectionString, insertQuery);
         }
 
         private bool execute_query(string connectionString, string query){
