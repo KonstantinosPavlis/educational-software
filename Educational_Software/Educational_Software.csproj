@@ -29,8 +29,17 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="Navigation_UI_Pages\About_the_app.xaml" />
     <None Remove="Navigation_UI_Pages\Edu_1.xaml" />
+    <None Remove="Navigation_UI_Pages\Edu_2.xaml" />
+    <None Remove="Navigation_UI_Pages\Edu_3.xaml" />
     <None Remove="Navigation_UI_Pages\Home.xaml" />
+    <None Remove="Navigation_UI_Pages\Quiz_1.xaml" />
+    <None Remove="Navigation_UI_Pages\Quiz_2.xaml" />
+    <None Remove="Navigation_UI_Pages\Quiz_3.xaml" />
+    <None Remove="Navigation_UI_Pages\Test_1.xaml" />
+    <None Remove="Navigation_UI_Pages\Test_2.xaml" />
+    <None Remove="Navigation_UI_Pages\Test_3.xaml" />
   </ItemGroup>
 
   <ItemGroup>
@@ -62,6 +71,51 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Navigation_UI_Pages\About_the_app.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Navigation_UI_Pages\Test_3.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Navigation_UI_Pages\Test_2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Navigation_UI_Pages\Test_1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Navigation_UI_Pages\Quiz_3.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Navigation_UI_Pages\Quiz_2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Navigation_UI_Pages\Edu_3.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Navigation_UI_Pages\Edu_2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Navigation_UI_Pages\Quiz_1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
 
   <!--

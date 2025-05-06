@@ -23,8 +23,7 @@ using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.Graphics;
 
-// To learn more about WinUI, the WinUI project structure,
-// and more about our project templates, see: http://aka.ms/winui-project-info.
+
 
 namespace Educational_Software
 {
@@ -85,6 +84,20 @@ namespace Educational_Software
             chapter_2_nav.IsExpanded = false;
             chapter_3_nav.IsExpanded = false;
 
+            sign_up_2.Visibility = Visibility.Collapsed;
+            sign_up_1.Visibility = Visibility.Visible;
+            sign_up_radio_1.SelectedItem = null;
+            sign_up_radio_2.SelectedItem = null;
+            sign_up_radio_3.SelectedItem = null;
+
+            email_obj.Text = "";
+            name_obj.Text = "";
+            surname_obj.Text = "";
+            password_obj.Password = "";
+
+            username_sign_in.Text = "";
+            password_sign_in.Password = "";
+
             sign_out_button.Visibility = Visibility.Collapsed;
             main_screen.Visibility = Visibility.Collapsed;
             welcome_screen.Visibility = Visibility.Visible;
@@ -100,6 +113,16 @@ namespace Educational_Software
             sign_up_1.Visibility = Visibility.Collapsed;
             sign_up_2.Visibility = Visibility.Visible;
 
+        }
+
+        private void Sign_up_back(object sender, RoutedEventArgs e)
+        {
+            sign_up_2.Visibility = Visibility.Collapsed;
+            sign_up_1.Visibility = Visibility.Visible;
+            sign_up_radio_1.SelectedItem = null;
+            sign_up_radio_2.SelectedItem = null;
+            sign_up_radio_3.SelectedItem = null;
+            
         }
 
         private void Sign_up(object sender, RoutedEventArgs e)
@@ -222,6 +245,33 @@ namespace Educational_Software
                             break;
                         case "edu_1":
                             contentFrame.Navigate(typeof(Edu_1));
+                            break;
+                        case "quiz_1":
+                            contentFrame.Navigate(typeof(Quiz_1));
+                            break;
+                        case "test_1":
+                            contentFrame.Navigate(typeof(Test_1));
+                            break;
+                        case "edu_2":
+                            contentFrame.Navigate(typeof(Edu_2));
+                            break;
+                        case "quiz_2":
+                            contentFrame.Navigate(typeof(Quiz_2));
+                            break;
+                        case "test_2":
+                            contentFrame.Navigate(typeof(Test_2));
+                            break;
+                        case "edu_3":
+                            contentFrame.Navigate(typeof(Edu_3));
+                            break;
+                        case "quiz_3":
+                            contentFrame.Navigate(typeof(Quiz_3));
+                            break;
+                        case "test_3":
+                            contentFrame.Navigate(typeof(Test_3));
+                            break;
+                        case "about_the_app":
+                            contentFrame.Navigate(typeof(About_the_app));
                             break;
 
                     }
