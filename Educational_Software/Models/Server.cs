@@ -30,5 +30,10 @@ namespace Educational_Software.Models
             if (users.Count > 0) user = users[0];
         }
 
+        public void sign_out()
+        {
+            user = null;
+        }
+
     }
 }
