@@ -7,6 +7,7 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.WindowsRuntime;
 using System.Threading.Tasks;
+using Educational_Software.Models;
 using Educational_Software.Navigation_UI_Pages;
 using Microsoft.UI;
 using Microsoft.UI.Windowing;
@@ -63,6 +64,9 @@ namespace Educational_Software
             AppWindow.Title = "Educational Software";
             AppWindow.SetIcon("Assets/light_house.ico");
 
+            System.Diagnostics.Debug.WriteLine("going to create tables");
+
+            DatabaseHandler.CreateTables();
 
 
         }
@@ -73,7 +77,20 @@ namespace Educational_Software
             main_screen.Visibility = Visibility.Visible;
             sign_out_button.Visibility = Visibility.Visible;
 
-            logged_in = true;
+            Debug.WriteLine("going to sign in");
+
+            Models.User user = Models.Server.sign_in(email_obj.Text, password_obj.Password);
+
+            if (user != null)
+            {
+                Debug.WriteLine("successful sign in");
+                logged_in = true;
+            }
+            else
+            {
+                Debug.WriteLine("unsuccessful sign in");
+                logged_in = false;
+            }
 
         }
 
@@ -127,7 +144,12 @@ namespace Educational_Software
 
         private void Sign_up(object sender, RoutedEventArgs e)
         {
-            
+            Debug.WriteLine("going to sign up");
+
+            Models.User user = Models.Server.sign_up(name_obj.Text, surname_obj.Text, email_obj.Text, password_obj.Password);
+
+            Debug.WriteLine("successful signup going to sign in");
+
         }
 
 
