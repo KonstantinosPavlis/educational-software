@@ -46,6 +46,8 @@ namespace Educational_Software
 
         bool logged_in = false;
 
+        Models.User user = null;
+
 
         public MainWindow()
         {
@@ -73,17 +75,20 @@ namespace Educational_Software
 
         private void Log_in(object sender, RoutedEventArgs e)
         {
-            welcome_screen.Visibility = Visibility.Collapsed;
-            main_screen.Visibility = Visibility.Visible;
-            sign_out_button.Visibility = Visibility.Visible;
+           
 
             Debug.WriteLine("going to sign in");
 
-            Models.User user = Models.Server.sign_in(email_obj.Text, password_obj.Password);
+            Debug.WriteLine(email_obj.Text);
+
+            user = Models.Server.sign_in(username_sign_in.Text.ToString(), password_sign_in.Password.ToString());
 
             if (user != null)
             {
                 Debug.WriteLine("successful sign in");
+                welcome_screen.Visibility = Visibility.Collapsed;
+                main_screen.Visibility = Visibility.Visible;
+                sign_out_button.Visibility = Visibility.Visible;
                 logged_in = true;
             }
             else
@@ -146,7 +151,7 @@ namespace Educational_Software
         {
             Debug.WriteLine("going to sign up");
 
-            Models.User user = Models.Server.sign_up(name_obj.Text, surname_obj.Text, email_obj.Text, password_obj.Password);
+            user = Models.Server.sign_up(name_obj.Text, surname_obj.Text, email_obj.Text, password_obj.Password);
 
             Debug.WriteLine("successful signup going to sign in");
 
