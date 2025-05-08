@@ -26,7 +26,7 @@
 
         <!-- Temporary Code for the Demo Only -->
 
-        <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Spacing="15">
+        <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Spacing="15" Visibility="Visible">
             <FontIcon Glyph="&#xE822;" FontSize="110" HorizontalAlignment="Center"/>
             <TextBlock Text="Under Construction" FontSize="25" FontWeight="SemiBold" HorizontalAlignment="Center"/>
 
