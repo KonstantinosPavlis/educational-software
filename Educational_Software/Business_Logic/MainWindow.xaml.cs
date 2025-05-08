@@ -90,11 +90,13 @@ namespace Educational_Software
                 main_screen.Visibility = Visibility.Visible;
                 sign_out_button.Visibility = Visibility.Visible;
                 logged_in = true;
+                Main_TeachingTip.IsOpen = false;
             }
             else
             {
                 Debug.WriteLine("unsuccessful sign in");
                 logged_in = false;
+                Main_TeachingTip.IsOpen = true;
             }
 
         }
@@ -155,6 +157,7 @@ namespace Educational_Software
 
             Debug.WriteLine("successful signup going to sign in");
 
+            Main_TeachingTip.IsOpen = false;
         }
 
 

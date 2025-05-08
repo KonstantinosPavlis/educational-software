@@ -255,7 +255,7 @@
                 </Frame>
             </NavigationView>
 
-            <TeachingTip x:Name="TeachingTip" x:FieldModifier="internal"
+            <TeachingTip x:Name="Main_TeachingTip" x:FieldModifier="internal"
                    Title="Αποτυχία σύνδεσης"
                    Subtitle="Το Email ή/και το Password είναι λανθασμένα. Προσπάθησε ξανά !"
                    HorizontalContentAlignment="Center"
