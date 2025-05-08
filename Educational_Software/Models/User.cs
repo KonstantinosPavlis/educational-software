@@ -9,7 +9,7 @@ namespace Educational_Software.Models
     internal class User
     {
         private int id;
-        public string name { get; }
+        public string name { get; } 
         public string lastname { get; }
         public string email { get; }
         public string password { get; }
