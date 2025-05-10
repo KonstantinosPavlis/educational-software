@@ -1,4 +1,5 @@
-﻿using Microsoft.UI.Xaml;
+﻿using Educational_Software.Models;
+using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Controls.Primitives;
 using Microsoft.UI.Xaml.Data;
@@ -20,11 +21,20 @@ namespace Educational_Software.Navigation_UI_Pages
     
     public sealed partial class Quiz_1 : Page
     {
+        User user;
         int current_question_number = 1;
 
         public Quiz_1()
         {
             this.InitializeComponent();
+        }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            if (e.Parameter != null)
+            {
+                user = e.Parameter as User;
+            }
         }
 
 

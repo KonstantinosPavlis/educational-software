@@ -31,7 +31,7 @@
     HorizontalAlignment="Stretch" VerticalAlignment="Center"  
     HorizontalScrollMode="Disabled" HorizontalScrollBarVisibility="Disabled"  
     VerticalScrollMode="Enabled" VerticalScrollBarVisibility="Auto"
-    Margin="40, 0, 40, 20">
+    Margin="40, 8, 40, 8">
 
             <StackPanel Spacing="50">
                 <Grid>
