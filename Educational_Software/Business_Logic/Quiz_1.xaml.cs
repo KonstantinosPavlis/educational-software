@@ -1,4 +1,5 @@
-﻿using Microsoft.UI.Xaml;
+﻿using Educational_Software.Models;
+using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Controls.Primitives;
 using Microsoft.UI.Xaml.Data;
@@ -20,6 +21,7 @@ namespace Educational_Software.Navigation_UI_Pages
     
     public sealed partial class Quiz_1 : Page
     {
+        User user;
         int current_question_number = 1;
         List<Boolean> question_list = new List<Boolean>();
         DateTime dateTime1;
@@ -30,6 +32,14 @@ namespace Educational_Software.Navigation_UI_Pages
         {
             this.InitializeComponent();
             dateTime1 = DateTime.Now;
+        }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            if (e.Parameter != null)
+            {
+                user = e.Parameter as User;
+            }
         }
 
 
