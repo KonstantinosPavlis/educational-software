@@ -40,6 +40,7 @@ namespace Educational_Software.Navigation_UI_Pages
             {
                 user = e.Parameter as User;
             }
+            List<Answer> answer_list = user.get_answers();
         }
 
 
@@ -226,6 +227,7 @@ namespace Educational_Software.Navigation_UI_Pages
                     info_message.Title = "Αποτυχία";
                     info_message.Message = "Ίσως δυσκλοευτήκατε πολύ στις απαντήσεις. Προσπαθήστε ξανά.";
                     current_question_number = 10;
+                    //delete answers for quiz 1
                 }
                 else
                 {

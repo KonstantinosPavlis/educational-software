@@ -39,6 +39,7 @@ namespace Educational_Software.Navigation_UI_Pages
             {
                 user = e.Parameter as User;
             }
+            List<Answer> answer_list = user.get_answers();
         }
 
         private void Next_step(object sender, RoutedEventArgs e)
@@ -66,7 +67,7 @@ namespace Educational_Software.Navigation_UI_Pages
                     question_2_radio_2.IsEnabled = true;
                     question_list.Add(true);
                     time_delay++;
-                    user.answer(1,10, time_period_seconds, 1f);
+                    user.answer(1, 10, time_period_seconds, 1f);
                 }
                 else
                 {

@@ -40,6 +40,7 @@ namespace Educational_Software.Navigation_UI_Pages
             {
                 user = e.Parameter as User;
             }
+            List<Answer> answer_list = user.get_answers();
         }
 
         private void Next_step(object sender, RoutedEventArgs e)
