@@ -42,13 +42,14 @@
 
                     <TextBlock Text="1." FontSize="50" FontWeight="SemiBold" HorizontalAlignment="Center" VerticalAlignment="Center" Width="50" Margin="0, 0, 20, 0" />
                     <Border Grid.Column="1" CornerRadius="12" BorderThickness="1" BorderBrush="Aquamarine" Padding="15" Background="AliceBlue" >
-
-                        <RadioButtons x:Name="question_1_radio" Header="Ποια είναι η συνολική έκταση του Εθνικού Πάρκου Δέλτα Έβρου;" MaxColumns="3" >
-                            <RadioButton x:Name="question_1_radio_answer1" Content="95.000 στρέμματα" />
-                            <RadioButton x:Name="question_1_radio_answer2" Content="200.000 στρέμματα" />
-                            <RadioButton x:Name="question_1_radio_answer3" Content="150.000 στρέμματα" />
-                        </RadioButtons>
-
+                        <StackPanel>
+                            <RadioButtons x:Name="question_1_radio" Header="Ποια είναι η συνολική έκταση του Εθνικού Πάρκου Δέλτα Έβρου;" MaxColumns="3" >
+                                <RadioButton x:Name="question_1_radio_answer1" Content="95.000 στρέμματα" />
+                                <RadioButton x:Name="question_1_radio_answer2" Content="200.000 στρέμματα" />
+                                <RadioButton x:Name="question_1_radio_answer3" Content="150.000 στρέμματα" />
+                            </RadioButtons>
+                            <TextBlock x:Name="question_1_empty" Text="Θέση Ερώτησης 1" FontSize="20" FontWeight="SemiLight" Foreground="DimGray" HorizontalAlignment="Center" Visibility="Visible"/>
+                        </StackPanel>
                     </Border>
                 </Grid>
                 <Grid>
@@ -125,7 +126,7 @@
                 <TextBlock Text="Επέλεξε απάντηση και πάτησε το κουμπί για να συνεχίσεις" HorizontalAlignment="Center"/>
             </StackPanel>
 
-            <Button Grid.Column="1" VerticalAlignment="Bottom" Content="Επόμενη" Style="{StaticResource AccentButtonStyle}" Width="170" Click="Next_step"  />
+            <Button x:Name="NextButton" Grid.Column="1" VerticalAlignment="Bottom" Content="Επόμενη" Style="{StaticResource AccentButtonStyle}" Width="170" Click="Next_step"  />
         </Grid>
 
     </Grid>

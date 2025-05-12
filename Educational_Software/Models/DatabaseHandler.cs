@@ -18,7 +18,7 @@ namespace Educational_Software.Models
             string createTableQuery0 = "CREATE TABLE IF NOT EXISTS " +
                         "User ( id INTEGER PRIMARY KEY, name TEXT, lastname TEXT, email TEXT, password TEXT )";
             string createTableQuery1 = "CREATE TABLE IF NOT EXISTS " +
-                        "Answer ( studentId INTEGER, section INTEGER, question INTEGER, time INTEGER, rating REAL )";
+                        "Answer ( studentId INTEGER, section INTEGER, question INTEGER, time INTEGER, rating REAL, userAnswer BOOLEAN)";
             execute_query(connectionString, createTableQuery0);
             execute_query(connectionString, createTableQuery1);
         }
@@ -29,9 +29,9 @@ namespace Educational_Software.Models
             return execute_query(connectionString, insertQuery);
         }
 
-        public static bool add_answer(int studentId, int section, int question, int time, double rating)
+        public static bool add_answer(int studentId, int section, int question, int time, double rating, bool userAnswer)
         {
-            string insertQuery = $"INSERT INTO Answer (studentId, section, question, time, rating) VALUES ({studentId}, {section}, {question}, {time}, @rating)";
+            string insertQuery = $"INSERT INTO Answer (studentId, section, question, time, rating, userAnswer) VALUES ({studentId}, {section}, {question}, {time}, @rating, {userAnswer})";
             //return execute_query(connectionString, insertQuery);
 
             try
@@ -143,7 +143,8 @@ namespace Educational_Software.Models
                             Convert.ToInt32(reader["section"]),
                             Convert.ToInt32(reader["question"]),
                             Convert.ToInt32(reader["time"]),
-                            Convert.ToSingle(reader["rating"])
+                            Convert.ToSingle(reader["rating"]),
+                            Convert.ToBoolean(reader["userAnswer"])
                             )
                         );
                     }

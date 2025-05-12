@@ -47,7 +47,7 @@
                         <StackPanel Spacing="5" HorizontalAlignment="Center" VerticalAlignment="Center">
                             <TextBlock Text="Ερώτηση Πολλαπλής Επιλογής" FontWeight="SemiBold" FontSize="16" Margin="0, 0, 0, 8" HorizontalAlignment="Center"/>
                             <StackPanel x:Name="question_1_1" Visibility="Visible">
-                                <TextBlock Text="Ερώτηση για την Αλεξανδρούπολη... Ποια απάντηση είναι σωστή ;" HorizontalAlignment="Center"/>
+                                <TextBlock Text="Ερώτηση για την Αλεξανδρούπολη1... Ποια απάντηση είναι σωστή ;" HorizontalAlignment="Center"/>
                                 <RadioButtons x:Name="question_1_1_radio" MaxColumns="4" HorizontalAlignment="Center" >
                                     <RadioButton Content="Απάντηση 1 " />
                                     <RadioButton Content="Απάντηση 2 " />
@@ -56,7 +56,7 @@
                                 </RadioButtons>
                             </StackPanel>
                             <StackPanel x:Name="question_1_2" Visibility="Collapsed">
-                                <TextBlock Text="Ερώτηση για την Αλεξανδρούπολη... Ποια απάντηση είναι σωστή ;" HorizontalAlignment="Center"/>
+                                <TextBlock Text="Ερώτηση για την Αλεξανδρούπολη2... Ποια απάντηση είναι σωστή ;" HorizontalAlignment="Center"/>
                                 <RadioButtons x:Name="question_1_2_radio" MaxColumns="4" HorizontalAlignment="Center" >
                                     <RadioButton Content="Απάντηση 1" />
                                     <RadioButton Content="Απάντηση 2" />
@@ -81,8 +81,8 @@
                         <StackPanel Spacing="5" HorizontalAlignment="Center" VerticalAlignment="Center">
                             <TextBlock Text="Ερώτηση Σωστού/Λάθους" FontWeight="SemiBold" FontSize="16" Margin="0, 0, 0, 8" HorizontalAlignment="Center"/>
                             <StackPanel>
-                                <TextBlock x:Name="question_2_1_text"  Text="Η Αλεξανδρούπολη βρίσκεται στις Κυκλάδες ;" HorizontalAlignment="Center" Visibility="Visible"/>
-                                <TextBlock x:Name="question_2_2_text"  Text="Η Αλεξανδρούπολη βρίσκεται στις Κυκλάδες ;" HorizontalAlignment="Center" Visibility="Collapsed"/>
+                                <TextBlock x:Name="question_2_1_text"  Text="Η Αλεξανδρούπολη βρίσκεται στις Κυκλάδες ;1" HorizontalAlignment="Center" Visibility="Visible"/>
+                                <TextBlock x:Name="question_2_2_text"  Text="Η Αλεξανδρούπολη βρίσκεται στις Κυκλάδες ;2" HorizontalAlignment="Center" Visibility="Collapsed"/>
                             </StackPanel>
                             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                                 <CheckBox x:Name="PositiveAnswer_checkbox" Content="Ναι" Checked="PositiveAnswer_checkbox_checked" Width="Auto" />
@@ -112,7 +112,7 @@
                             VerticalScrollMode="Disabled" VerticalScrollBarVisibility="Disabled" >
                                 <StackPanel>
                                     <StackPanel x:Name="question_3_1" Orientation="Horizontal" HorizontalAlignment="Center" Spacing="7" VerticalAlignment="Center" Margin="0 , 7, 0, 17" Visibility="Visible">
-                                        <TextBlock x:Name="question_3_1_text" Text="«Η Αλεξανδρούπολη είναι μια περιοχή η οποία βρίσκεται στη" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="16"/>
+                                        <TextBlock x:Name="question_3_1_text" Text="«1Η Αλεξανδρούπολη είναι μια περιοχή η οποία βρίσκεται στη" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="16"/>
                                         <ComboBox x:Name="question_3_1_combobox" PlaceholderText="Επιλογή" Width="130" HorizontalAlignment="Center" VerticalAlignment="Bottom">
                                             <x:String>Βόρεια</x:String>
                                             <x:String>Κεντρική</x:String>
@@ -121,7 +121,7 @@
                                         <TextBlock Text="Ελλάδα.»" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16" />
                                     </StackPanel>
                                     <StackPanel x:Name="question_3_2" Orientation="Horizontal" HorizontalAlignment="Center" Spacing="7" VerticalAlignment="Center" Margin="0 , 7, 0, 17" Visibility="Collapsed">
-                                        <TextBlock x:Name="question_3_2_text" Text="«Η Αλεξανδρούπολη είναι μια περιοχή η οποία βρίσκεται στη " VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="16"/>
+                                        <TextBlock x:Name="question_3_2_text" Text="«2Η Αλεξανδρούπολη είναι μια περιοχή η οποία βρίσκεται στη " VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="16"/>
                                         <ComboBox x:Name="question_3_2_combobox" PlaceholderText="Επιλογή" Width="130" HorizontalAlignment="Center" VerticalAlignment="Bottom">
                                             <x:String>Βόρεια</x:String>
                                             <x:String>Κεντρική</x:String>
