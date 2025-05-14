@@ -183,14 +183,14 @@ namespace Educational_Software.Navigation_UI_Pages
                 question_2_empty.Visibility = Visibility.Collapsed;
                 System.Diagnostics.Debug.WriteLine("AAAAAAAAAAAAAAAAAAAAAAAAAAAA"+((bool)question_1_radio_answer1.IsChecked).ToString());
 
-                if ((bool)question_1_radio_answer1.IsChecked && time_period_seconds< answer_timer)
+                if ((bool)question_1_radio_answer3.IsChecked && time_period_seconds< answer_timer)
                 {
                     question_2_radio_1.Visibility = Visibility.Visible;
                     question_2_radio_1.IsEnabled = true;
                     question_list.Add(true);
                     user.answer(1, 10, time_period_seconds, 1f, true);
                 }
-                else if((bool)question_1_radio_answer1.IsChecked && time_period_seconds >= answer_timer)
+                else if((bool)question_1_radio_answer3.IsChecked && time_period_seconds >= answer_timer)
                 {
                     question_2_radio_2.Visibility = Visibility.Visible;
                     question_2_radio_2.IsEnabled = true;
@@ -218,14 +218,14 @@ namespace Educational_Software.Navigation_UI_Pages
                 if (question_list[0] == true && time_delay == 0)
                 {
                     question_2_radio_1.IsEnabled = false;
-                    if ((bool)question_2_radio1_answer3.IsChecked && time_period_seconds< answer_timer)
+                    if ((bool)question_2_radio1_answer2.IsChecked && time_period_seconds< answer_timer)
                     {
                         question_3_radio_1.Visibility = Visibility.Visible;
                         question_3_radio_1.IsEnabled = true;
                         question_list.Add(true);
                         user.answer(1, 21, time_period_seconds, 1f, true);
                     }
-                    else if((bool)question_2_radio1_answer3.IsChecked && time_period_seconds >= answer_timer)
+                    else if((bool)question_2_radio1_answer2.IsChecked && time_period_seconds >= answer_timer)
                     {
                         question_3_radio_2.Visibility = Visibility.Visible;
                         question_3_radio_2.IsEnabled = true;
@@ -244,14 +244,14 @@ namespace Educational_Software.Navigation_UI_Pages
                 else
                 {
                     question_2_radio_2.IsEnabled = false;
-                    if ((bool)question_2_radio2_answer2.IsChecked && time_period_seconds < answer_timer)
+                    if ((bool)question_2_radio2_answer1.IsChecked && time_period_seconds < answer_timer)
                     {
                         question_3_radio_2.Visibility = Visibility.Visible;
                         question_3_radio_2.IsEnabled = true;
                         question_list.Add(true);
                         user.answer(1, 22, time_period_seconds, 1f, true);
                     }
-                    else if ((bool)question_2_radio2_answer2.IsChecked && time_period_seconds >= answer_timer)
+                    else if ((bool)question_2_radio2_answer1.IsChecked && time_period_seconds >= answer_timer)
                     {
                         question_3_radio_3.Visibility = Visibility.Visible;
                         question_3_radio_3.IsEnabled = true;
@@ -280,12 +280,12 @@ namespace Educational_Software.Navigation_UI_Pages
                 if (question_list[0] == true && question_list[1]== true && time_delay == 0)
                 {
                     question_3_radio_1.IsEnabled = false;
-                    if ((bool)question_3_radio1_answer3.IsChecked && time_period_seconds < answer_timer)
+                    if ((bool)question_3_radio1_answer1.IsChecked && time_period_seconds < answer_timer)
                     {
                         question_list.Add(true);
                         user.answer(1, 31, time_period_seconds, 1f, true);
                     }
-                    else if((bool)question_3_radio1_answer3.IsChecked && time_period_seconds >= answer_timer)
+                    else if((bool)question_3_radio1_answer1.IsChecked && time_period_seconds >= answer_timer)
                     {
                         question_list.Add(true);
                         time_delay++;
@@ -300,12 +300,12 @@ namespace Educational_Software.Navigation_UI_Pages
                 else if ((question_list[0] == true && question_list[1] == false) || (question_list[0] == false && question_list[1] == true) || (question_list[0] == true && question_list[1] == true && time_delay == 1))
                 {
                     question_3_radio_2.IsEnabled = false;
-                    if ((bool)question_3_radio2_answer2.IsChecked && time_period_seconds < answer_timer)
+                    if ((bool)question_3_radio2_answer3.IsChecked && time_period_seconds < answer_timer)
                     {
                         question_list.Add(true);
                         user.answer(1, 32, time_period_seconds, 1f, true);
                     }
-                    else if((bool)question_3_radio2_answer2.IsChecked && time_period_seconds >= answer_timer)
+                    else if((bool)question_3_radio2_answer3.IsChecked && time_period_seconds >= answer_timer)
                     {
                         question_list.Add(true);
                         time_delay++;
@@ -320,12 +320,12 @@ namespace Educational_Software.Navigation_UI_Pages
                 else if (question_list[0] == false && question_list[1] == false || (question_list[0] == true && question_list[1] == true && time_delay == 2))
                 {
                     question_3_radio_3.IsEnabled = false;
-                    if ((bool)question_3_radio3_answer3.IsChecked && time_period_seconds < answer_timer)
+                    if ((bool)question_3_radio3_answer2.IsChecked && time_period_seconds < answer_timer)
                     {
                         question_list.Add(true);
                         user.answer(1, 33, time_period_seconds, 1f, true);
                     }
-                    else if ((bool)question_3_radio3_answer3.IsChecked && time_period_seconds >= answer_timer)
+                    else if ((bool)question_3_radio3_answer2.IsChecked && time_period_seconds >= answer_timer)
                     {
                         question_list.Add(true);
                         time_delay++;

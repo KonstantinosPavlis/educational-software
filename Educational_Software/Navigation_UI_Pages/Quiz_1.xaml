@@ -94,10 +94,10 @@
                                 <RadioButton x:Name="question_3_radio2_answer2" Content="Με ασετιλίνη" />
                                 <RadioButton x:Name="question_3_radio2_answer3" Content="Με κάρβουνο" />
                             </RadioButtons>
-                            <RadioButtons x:Name="question_3_radio_3" Header="Ποια είναι η εμβέλεια της φωτεινής δέσμης του φάρου;" MaxColumns="3" Visibility="Collapsed">
-                                <RadioButton x:Name="question_3_radio3_answer1" Content="12 ναυτικά μίλια" />
-                                <RadioButton x:Name="question_3_radio3_answer2" Content="18 ναυτικά μίλια" />
-                                <RadioButton x:Name="question_3_radio3_answer3" Content="24 ναυτικά μίλια" />
+                            <RadioButtons x:Name="question_3_radio_3" Header="Ποιο από τα παρακάτω δεν αποτελεί χαρακτηριστικό του φάρου της Αλεξανδρούπολης σύμφωνα με το κείμενο;" MaxColumns="3" Visibility="Collapsed">
+                                <RadioButton x:Name="question_3_radio3_answer1" Content="Διαθέτει εφεδρικό σύστημα λειτουργίας σε περίπτωση διακοπής ρεύματος" />
+                                <RadioButton x:Name="question_3_radio3_answer2" Content="Εκπέμπει τρεις λευκές αναλαμπές κάθε 15 δευτερόλεπτα" />
+                                <RadioButton x:Name="question_3_radio3_answer3" Content="Έχει ύψος 18 μέτρα από το επίπεδο της θάλασσας" />
                             </RadioButtons>
                             <TextBlock x:Name="question_3_empty" Text="Θέση Ερώτησης 3" FontSize="20" FontWeight="SemiLight" Foreground="DimGray" HorizontalAlignment="Center" Visibility="Visible"/>
                         </StackPanel>
