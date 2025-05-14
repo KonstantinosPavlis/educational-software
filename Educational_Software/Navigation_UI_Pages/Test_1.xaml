@@ -49,19 +49,19 @@
                             <StackPanel x:Name="question_1_1" Visibility="Visible">
                                 <TextBlock Text="Ερώτηση για την Αλεξανδρούπολη1... Ποια απάντηση είναι σωστή ;" HorizontalAlignment="Center"/>
                                 <RadioButtons x:Name="question_1_1_radio" MaxColumns="4" HorizontalAlignment="Center" >
-                                    <RadioButton Content="Απάντηση 1 " />
-                                    <RadioButton Content="Απάντηση 2 " />
-                                    <RadioButton Content="Απάντηση 3 " />
-                                    <RadioButton Content="Απάντηση 4 " />
+                                    <RadioButton x:Name="question_1_1_radio_answer1" Content="Απάντηση 11 " />
+                                    <RadioButton x:Name="question_1_1_radio_answer2" Content="Απάντηση 12 " />
+                                    <RadioButton x:Name="question_1_1_radio_answer3" Content="Απάντηση 13 " />
+                                    <RadioButton x:Name="question_1_1_radio_answer4" Content="Απάντηση 14 " />
                                 </RadioButtons>
                             </StackPanel>
                             <StackPanel x:Name="question_1_2" Visibility="Collapsed">
                                 <TextBlock Text="Ερώτηση για την Αλεξανδρούπολη2... Ποια απάντηση είναι σωστή ;" HorizontalAlignment="Center"/>
                                 <RadioButtons x:Name="question_1_2_radio" MaxColumns="4" HorizontalAlignment="Center" >
-                                    <RadioButton Content="Απάντηση 1" />
-                                    <RadioButton Content="Απάντηση 2" />
-                                    <RadioButton Content="Απάντηση 3" />
-                                    <RadioButton Content="Απάντηση 4" />
+                                    <RadioButton x:Name="question_1_2_radio_answer1" Content="Απάντηση 21" />
+                                    <RadioButton x:Name="question_1_2_radio_answer2" Content="Απάντηση 22" />
+                                    <RadioButton x:Name="question_1_2_radio_answer3" Content="Απάντηση 23" />
+                                    <RadioButton x:Name="question_1_2_radio_answer4" Content="Απάντηση 24" />
                                 </RadioButtons>
                             </StackPanel>
                         </StackPanel>
@@ -114,18 +114,18 @@
                                     <StackPanel x:Name="question_3_1" Orientation="Horizontal" HorizontalAlignment="Center" Spacing="7" VerticalAlignment="Center" Margin="0 , 7, 0, 17" Visibility="Visible">
                                         <TextBlock x:Name="question_3_1_text" Text="«1Η Αλεξανδρούπολη είναι μια περιοχή η οποία βρίσκεται στη" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="16"/>
                                         <ComboBox x:Name="question_3_1_combobox" PlaceholderText="Επιλογή" Width="130" HorizontalAlignment="Center" VerticalAlignment="Bottom">
-                                            <x:String>Βόρεια</x:String>
-                                            <x:String>Κεντρική</x:String>
-                                            <x:String>Νότια</x:String>
+                                            <x:String>Βόρεια1</x:String>
+                                            <x:String>Κεντρική1</x:String>
+                                            <x:String>Νότια1</x:String>
                                         </ComboBox>
                                         <TextBlock Text="Ελλάδα.»" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16" />
                                     </StackPanel>
                                     <StackPanel x:Name="question_3_2" Orientation="Horizontal" HorizontalAlignment="Center" Spacing="7" VerticalAlignment="Center" Margin="0 , 7, 0, 17" Visibility="Collapsed">
                                         <TextBlock x:Name="question_3_2_text" Text="«2Η Αλεξανδρούπολη είναι μια περιοχή η οποία βρίσκεται στη " VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="16"/>
                                         <ComboBox x:Name="question_3_2_combobox" PlaceholderText="Επιλογή" Width="130" HorizontalAlignment="Center" VerticalAlignment="Bottom">
-                                            <x:String>Βόρεια</x:String>
-                                            <x:String>Κεντρική</x:String>
-                                            <x:String>Νότια</x:String>
+                                            <x:String>Βόρεια2</x:String>
+                                            <x:String>Κεντρική2</x:String>
+                                            <x:String>Νότια2</x:String>
                                         </ComboBox>
                                         <TextBlock Text="Ελλάδα.»" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16" />
                                     </StackPanel>

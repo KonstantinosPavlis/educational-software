@@ -35,5 +35,10 @@ namespace Educational_Software.Models
             return new Answer(id, section, question, time, rating, userAnswer);
         }
 
+        public void remove_answer(int section)
+        {
+            bool has_deleted = DatabaseHandler.remove_answer(id,section);
+        }
+
     }
 }

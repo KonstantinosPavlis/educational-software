@@ -48,7 +48,7 @@
                                 <RadioButton x:Name="question_1_radio_answer2" Content="200.000 στρέμματα" />
                                 <RadioButton x:Name="question_1_radio_answer3" Content="150.000 στρέμματα" />
                             </RadioButtons>
-                            <TextBlock x:Name="question_1_empty" Text="Θέση Ερώτησης 1" FontSize="20" FontWeight="SemiLight" Foreground="DimGray" HorizontalAlignment="Center" Visibility="Visible"/>
+                            <TextBlock x:Name="question_1_empty" Text="Θέση Ερώτησης 1" FontSize="20" FontWeight="SemiLight" Foreground="DimGray" HorizontalAlignment="Center" Visibility="Collapsed"/>
                         </StackPanel>
                     </Border>
                 </Grid>

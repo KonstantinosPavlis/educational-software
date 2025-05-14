@@ -47,19 +47,19 @@
                             <StackPanel x:Name="question_1_1" Visibility="Visible">
                                 <TextBlock Text="Ερώτηση για την Αλεξανδρούπολη... Ποια απάντηση είναι σωστή ;" HorizontalAlignment="Center"/>
                                 <RadioButtons x:Name="question_1_1_radio" MaxColumns="4" HorizontalAlignment="Center" >
-                                    <RadioButton Content="Απάντηση 1" />
-                                    <RadioButton Content="Απάντηση 2" />
-                                    <RadioButton Content="Απάντηση 3" />
-                                    <RadioButton Content="Απάντηση 4" />
+                                    <RadioButton x:Name="question_1_1_radio_answer1" Content="Απάντηση 1" />
+                                    <RadioButton x:Name="question_1_1_radio_answer2" Content="Απάντηση 2" />
+                                    <RadioButton x:Name="question_1_1_radio_answer3" Content="Απάντηση 3" />
+                                    <RadioButton x:Name="question_1_1_radio_answer4" Content="Απάντηση 4" />
                                 </RadioButtons>
                             </StackPanel>
                             <StackPanel x:Name="question_1_2" Visibility="Collapsed">
                                 <TextBlock Text="Ερώτηση για την Αλεξανδρούπολη... Ποια απάντηση είναι σωστή ;" HorizontalAlignment="Center"/>
                                 <RadioButtons x:Name="question_1_2_radio" MaxColumns="4" HorizontalAlignment="Center" >
-                                    <RadioButton Content="Απάντηση 1" />
-                                    <RadioButton Content="Απάντηση 2" />
-                                    <RadioButton Content="Απάντηση 3" />
-                                    <RadioButton Content="Απάντηση 4" />
+                                    <RadioButton x:Name="question_1_2_radio_answer1" Content="Απάντηση 1" />
+                                    <RadioButton x:Name="question_1_2_radio_answer2" Content="Απάντηση 2" />
+                                    <RadioButton x:Name="question_1_2_radio_answer3" Content="Απάντηση 3" />
+                                    <RadioButton x:Name="question_1_2_radio_answer4" Content="Απάντηση 4" />
                                 </RadioButtons>
                             </StackPanel>
                         </StackPanel>

@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using System.Data.SQLite;
 using Windows.Data.Text;
 using System.Diagnostics;
+using System.Xml.Linq;
+using Windows.Networking;
 
 namespace Educational_Software.Models
 {
@@ -58,6 +60,11 @@ namespace Educational_Software.Models
                 return false;
             }
 
+        }
+        public static bool remove_answer(int studentId, int section)
+        {
+            string insertQuery = $"DELETE FROM Answer WHERE studentId={studentId} AND section={section}";
+            return execute_query(connectionString, insertQuery);
         }
 
         private static bool execute_query(string connectionString, string query){

@@ -48,7 +48,7 @@
                             <RadioButton x:Name="question_1_radio_answer2" Content="Στην ανατολική πλευρά του λιμανιού" />
                             <RadioButton x:Name="question_1_radio_answer3" Content="Στο κέντρο της πόλης" />
                         </RadioButtons>
-                        <TextBlock x:Name="question_1_empty" Text="Θέση Ερώτησης 1" FontSize="20" FontWeight="SemiLight" Foreground="DimGray" HorizontalAlignment="Center" Visibility="Visible"/>
+                        <TextBlock x:Name="question_1_empty" Text="Θέση Ερώτησης 1" FontSize="20" FontWeight="SemiLight" Foreground="DimGray" HorizontalAlignment="Center" Visibility="Collapsed"/>
                         </StackPanel>
                     </Border>
                 </Grid>
