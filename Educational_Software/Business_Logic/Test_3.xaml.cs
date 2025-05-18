@@ -40,20 +40,36 @@ namespace Educational_Software.Navigation_UI_Pages
                 user = e.Parameter as User;
             }
             float score = user.get_answers().Where(s => s.section == 3).Sum(a => a.rating);
-            if (score < 2.5f)
+            if (user.get_answers().Count(a => a.section == 3 && a.question == 4 && a.userAnswer) == 0)
             {
-                difficult = false;
+                if (score < 2.5f)
+                {
+                    difficult = false;
+                    question_1_1_radio.IsEnabled = false;
+                    question_1_1.Visibility = Visibility.Collapsed;
+
+                    question_1_2_radio.IsEnabled = true;
+                    question_1_2.Visibility = Visibility.Visible;
+
+                    question_2_1_text.Visibility = Visibility.Collapsed;
+                    question_2_2_text.Visibility = Visibility.Visible;
+
+                    question_3_1.Visibility = Visibility.Collapsed;
+                    question_3_2.Visibility = Visibility.Visible;
+                }
+            }
+            else
+            {
+                test_1_questions.Visibility = Visibility.Collapsed;
+                completion_button.IsEnabled = false;
+                completion_button.Visibility = Visibility.Collapsed;
+                info_message.Severity = InfoBarSeverity.Success;
+                info_message.Title = "Επιτυχία";
+                info_message.Message = "Έχετε περάσει τη δοκιμασία !";
                 question_1_1_radio.IsEnabled = false;
-                question_1_1_radio.Visibility = Visibility.Collapsed;
-
-                question_1_2_radio.IsEnabled = true;
-                question_1_2_radio.Visibility = Visibility.Visible;
-
-                question_2_1_text.Visibility = Visibility.Collapsed;
-                question_2_2_text.Visibility = Visibility.Visible;
-
-                question_3_1.Visibility = Visibility.Collapsed;
-                question_3_2.Visibility = Visibility.Visible;
+                NegativeAnswer_checkbox.IsEnabled = false;
+                PositiveAnswer_checkbox.IsEnabled = false;
+                question_3_1_combobox.IsEnabled = false;
             }
         }
 
@@ -98,7 +114,7 @@ namespace Educational_Software.Navigation_UI_Pages
             {
                 if (difficult)
                 {
-                    if ((bool)question_1_2_radio_answer1.IsChecked)
+                    if ((bool)question_1_1_radio_answer1.IsChecked)
                     {
                         answer.Add(true);
                         scores.Add(1f);
@@ -121,29 +137,22 @@ namespace Educational_Software.Navigation_UI_Pages
                     }
 
 
-                    if (question_3_1_combobox != null)
+                    if (question_3_1_combobox.SelectedIndex == 2)
                     {
-                        if (question_3_1_combobox.SelectedItem.Equals("a"))
-                        {
-                            answer.Add(true);
-                            scores.Add(1f);
-                        }
-                        else
-                        {
-                            answer.Add(false);
-                            scores.Add(0f);
-                        }
+                        answer.Add(true);
+                        scores.Add(1f);
                     }
                     else
                     {
                         answer.Add(false);
                         scores.Add(0f);
                     }
+                    
 
                 }
                 else
                 {
-                    if ((bool)question_1_2_radio_answer1.IsChecked)
+                    if ((bool)question_1_2_radio_answer2.IsChecked)
                     {
                         answer.Add(true);
                         scores.Add(1f);
@@ -154,7 +163,7 @@ namespace Educational_Software.Navigation_UI_Pages
                         scores.Add(0f);
                     }
 
-                    if ((bool)NegativeAnswer_checkbox.IsChecked)
+                    if ((bool)PositiveAnswer_checkbox.IsChecked)
                     {
                         answer.Add(true);
                         scores.Add(1f);
@@ -166,45 +175,38 @@ namespace Educational_Software.Navigation_UI_Pages
                     }
 
 
-                    if (question_3_1_combobox != null)
+                    if (question_3_2_combobox.SelectedIndex == 0)
                     {
-                        if (question_3_1_combobox.SelectedItem.Equals("a"))
-                        {
-                            answer.Add(true);
-                            scores.Add(1f);
-                        }
-                        else
-                        {
-                            answer.Add(false);
-                            scores.Add(0f);
-                        }
+                        answer.Add(true);
+                        scores.Add(1f);
                     }
                     else
                     {
                         answer.Add(false);
                         scores.Add(0f);
                     }
+                    
                 }
 
                 TimeSpan time_period = dateTime2 - dateTime1;
                 int time_period_seconds = (int)time_period.TotalSeconds;
 
-                if (answer.Count(a => a == true) < 2 && time_period_seconds > 300)
+                if (answer.Count(a => a == true) < 2 || time_period_seconds > 300)
                 {
                     ((Button)sender).Content = "Επανάληψη";
                     info_message.Severity = InfoBarSeverity.Error;
                     info_message.Title = "Αποτυχία";
-                    info_message.Message = "Απαντήσατε σε πολλές ερωτήσεις λάθος. Προσπαθήστε ξανά.";
+                    info_message.Message = "Προσπαθήστε ξανά.";
                     question_1_1_radio.IsEnabled = false;
                     NegativeAnswer_checkbox.IsEnabled = false;
                     PositiveAnswer_checkbox.IsEnabled = false;
                     question_3_1_combobox.IsEnabled = false;
-                    user.answer(3, 4, time_period_seconds, scores.Sum(), false);
+                    //user.answer(3, 4, time_period_seconds, scores.Sum(), false);
 
                 }
                 else
                 {
-                    ((Button)sender).Content = "Επανάληψη";
+                    ((Button)sender).Content = "Τέλος";
                     info_message.Severity = InfoBarSeverity.Success;
                     info_message.Title = "Επιτυχία";
                     info_message.Message = "Συγχαρητήρια! Περάσατε τη δοκιμασία !";

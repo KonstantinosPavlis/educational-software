@@ -34,17 +34,6 @@ namespace Educational_Software.Navigation_UI_Pages
                 user = e.Parameter as User;
             }
             user_full_name.Text = user.name + " " + user.lastname;
-            float quiz_1_score = user.get_answers().Where(a => a.section == 1 && a.question != 4).Select(a => a.rating).Sum();
-            float quiz_2_score = user.get_answers().Where(a => a.section == 2 && a.question != 4).Select(a => a.rating).Sum();
-            float quiz_3_score = user.get_answers().Where(a => a.section == 3&& a.question != 4).Select(a => a.rating).Sum();
-
-            int quiz_1_time_sec = user.get_answers().Where(a => a.section == 1 && a.question != 4).Select(t => t.time).Sum();
-            int quiz_2_time_sec = user.get_answers().Where(a => a.section == 2 && a.question != 4).Select(t => t.time).Sum();
-            int quiz_3_time_sec = user.get_answers().Where(a => a.section == 3 && a.question != 4).Select(t => t.time).Sum();
-
-            TimeSpan quiz_1_time = TimeSpan.FromSeconds(quiz_1_time_sec);
-            TimeSpan quiz_2_time = TimeSpan.FromSeconds(quiz_2_time_sec);
-            TimeSpan quiz_3_time = TimeSpan.FromSeconds(quiz_3_time_sec);
 
             var test_1 = user.get_answers().FirstOrDefault(a => a.section == 1 && a.question == 4);
             //System.Diagnostics.Debug.WriteLine("OI APANTHSEIS EINAI" + user.get_answers().Where(a => a.question == 10).Count());
@@ -73,6 +62,7 @@ namespace Educational_Software.Navigation_UI_Pages
 
             if (test_1 != null)
             {
+                System.Diagnostics.Debug.WriteLine("Oi swstes apanthseis einai" + user.get_answers().FirstOrDefault(a => a.section == 1 && a.question == 4).rating);
                 TimeSpan test_1_time = TimeSpan.FromSeconds(test_1.time);
                 score_test_1.Text = test_1.rating.ToString();
                 test_1_minutes.Text = test_1_time.Minutes.ToString();
@@ -89,6 +79,8 @@ namespace Educational_Software.Navigation_UI_Pages
 
             if (test_2 != null)
             {
+                System.Diagnostics.Debug.WriteLine("OI APANTHSEIS EINAI2" + user.get_answers().FirstOrDefault(a => a.section == 2 && a.question == 4).rating);
+
                 TimeSpan test_2_time = TimeSpan.FromSeconds(test_2.time);
                 score_test_2.Text = test_2.rating.ToString();
                 test_2_minutes.Text = test_2_time.Minutes.ToString();
@@ -105,6 +97,8 @@ namespace Educational_Software.Navigation_UI_Pages
 
             if (test_3 != null)
             {
+                System.Diagnostics.Debug.WriteLine("OI APANTHSEIS EINAI2" + user.get_answers().FirstOrDefault(a => a.section == 2 && a.question == 4).rating);
+                System.Diagnostics.Debug.WriteLine("OI APANTHSEIS EINAI3" + user.get_answers().FirstOrDefault(a => a.section == 3 && a.question == 4).rating);
                 TimeSpan test_3_time = TimeSpan.FromSeconds(test_3.time);
                 score_test_3.Text = test_3.rating.ToString();
                 test_3_minutes.Text = test_3_time.Minutes.ToString();

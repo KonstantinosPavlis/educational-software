@@ -49,6 +49,7 @@
                                 <RadioButton x:Name="question_1_radio_answer3" Content="Το Καπνομάγαζο" />
                             </RadioButtons>
                             <TextBlock x:Name="question_1_empty" Text="Θέση Ερώτησης 1" FontSize="20" FontWeight="SemiLight" Foreground="DimGray" HorizontalAlignment="Center" Visibility="Collapsed"/>
+                            <TextBlock x:Name="question_1_answered" Text="Απαντήθηκε" FontSize="20" FontWeight="SemiLight" Foreground="DimGray" HorizontalAlignment="Center" Visibility="Collapsed"/>
                         </StackPanel>
                     </Border>
                 </Grid>
@@ -72,6 +73,7 @@
                                 <RadioButton x:Name="question_2_radio2_answer3" Content="Φιλιππούπολη" />
                             </RadioButtons>
                             <TextBlock x:Name="question_2_empty" Text="Θέση Ερώτησης 2" FontSize="20" FontWeight="SemiLight" Foreground="DimGray" HorizontalAlignment="Center" Visibility="Visible"/>
+                            <TextBlock x:Name="question_2_answered" Text="Απαντήθηκε" FontSize="20" FontWeight="SemiLight" Foreground="DimGray" HorizontalAlignment="Center" Visibility="Collapsed"/>
                         </StackPanel>
                     </Border>
                 </Grid>
@@ -87,7 +89,7 @@
                             <RadioButtons x:Name="question_3_radio_1" Header="Ποια από τις παρακάτω χρονικές αλληλουχίες γεγονότων είναι σωστή για το Καπνομάγαζο;" MaxColumns="3" Visibility="Collapsed">
                                 <RadioButton x:Name="question_3_radio1_answer1" Content="Πυρκαγιά – Καθολικό Σχολείο – Καπναποθήκη – Προσφυγική στέγαση" />
                                 <RadioButton x:Name="question_3_radio1_answer2" Content="Καθολικό Σχολείο – Καπναποθήκη – Πυρκαγιά – Προσφυγική στέγαση" />
-                                <RadioButton x:Name="question_3_radio1_answer3" Content="Καθολικό Σχολείο – Πυρκαγιά – Προσφυγική στέγαση – Καπναποθήκη (Σ)" />
+                                <RadioButton x:Name="question_3_radio1_answer3" Content="Καθολικό Σχολείο – Πυρκαγιά – Προσφυγική στέγαση – Καπναποθήκη" />
                             </RadioButtons>
                             <RadioButtons x:Name="question_3_radio_2" Header="Ποια από τις παρακάτω πληροφορίες ΔΕΝ ισχύει για τον Σιδηροδρομικό Σταθμό της Αλεξανδρούπολης;" MaxColumns="3" Visibility="Collapsed">
                                 <RadioButton x:Name="question_3_radio2_answer1" Content="Είναι διώροφος με κεραμοσκεπή" />
@@ -100,6 +102,7 @@
                                 <RadioButton x:Name="question_3_radio3_answer3" Content="Στις αρχές του 18ου αιώνα" />
                             </RadioButtons>
                             <TextBlock x:Name="question_3_empty" Text="Θέση Ερώτησης 3" FontSize="20" FontWeight="SemiLight" Foreground="DimGray" HorizontalAlignment="Center" Visibility="Visible"/>
+                            <TextBlock x:Name="question_3_answered" Text="Απαντήθηκε" FontSize="20" FontWeight="SemiLight" Foreground="DimGray" HorizontalAlignment="Center" Visibility="Collapsed"/>
                         </StackPanel>
                     </Border>
                 </Grid>

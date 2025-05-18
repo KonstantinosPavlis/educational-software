@@ -49,6 +49,7 @@
                                 <RadioButton x:Name="question_1_radio_answer3" Content="150.000 στρέμματα" />
                             </RadioButtons>
                             <TextBlock x:Name="question_1_empty" Text="Θέση Ερώτησης 1" FontSize="20" FontWeight="SemiLight" Foreground="DimGray" HorizontalAlignment="Center" Visibility="Collapsed"/>
+                            <TextBlock x:Name="question_1_answered" Text="Απαντήθηκε" FontSize="20" FontWeight="SemiLight" Foreground="DimGray" HorizontalAlignment="Center" Visibility="Collapsed"/>
                         </StackPanel>
                     </Border>
                 </Grid>
@@ -72,6 +73,7 @@
                                 <RadioButton x:Name="question_2_radio2_answer3" Content="Κρίνο της θάλασσας" />
                             </RadioButtons>
                             <TextBlock x:Name="question_2_empty" Text="Θέση Ερώτησης 2" FontSize="20" FontWeight="SemiLight" Foreground="DimGray" HorizontalAlignment="Center" Visibility="Visible"/>
+                            <TextBlock x:Name="question_2_answered" Text="Απαντήθηκε" FontSize="20" FontWeight="SemiLight" Foreground="DimGray" HorizontalAlignment="Center" Visibility="Collapsed"/>
                         </StackPanel>
                     </Border>
                 </Grid>
@@ -100,6 +102,7 @@
                                 <RadioButton x:Name="question_3_radio3_answer3" Content="Ορχιδέα – Κανάλια" />
                             </RadioButtons>
                             <TextBlock x:Name="question_3_empty" Text="Θέση Ερώτησης 3" FontSize="20" FontWeight="SemiLight" Foreground="DimGray" HorizontalAlignment="Center" Visibility="Visible"/>
+                            <TextBlock x:Name="question_3_answered" Text="Απαντήθηκε" FontSize="20" FontWeight="SemiLight" Foreground="DimGray" HorizontalAlignment="Center" Visibility="Collapsed"/>
                         </StackPanel>
                     </Border>
                 </Grid>
