@@ -66,17 +66,11 @@ namespace Educational_Software
 
         private void Log_in(object sender, RoutedEventArgs e)
         {
-           
-
-            Debug.WriteLine("going to sign in");
-
-            Debug.WriteLine(email_obj.Text);
 
             user = Models.Server.sign_in(username_sign_in.Text.ToString(), password_sign_in.Password.ToString());
 
             if (user != null)
             {
-                Debug.WriteLine("successful sign in");
 
                 if (user.get_answers().Count(a => a.section == 2 && a.question == 4 && a.userAnswer) > 0)
                 {
@@ -138,10 +132,10 @@ namespace Educational_Software
                 sign_out_button.Visibility = Visibility.Visible;
                 logged_in = true;
                 Main_TeachingTip.IsOpen = false;
+                SignUp_TeachingTip.IsOpen = false;
             }
             else
             {
-                Debug.WriteLine("unsuccessful sign in");
                 logged_in = false;
                 Main_TeachingTip.IsOpen = true;
             }
@@ -205,35 +199,53 @@ namespace Educational_Software
 
         private void Sign_up(object sender, RoutedEventArgs e)
         {
-            Debug.WriteLine("going to sign up");
 
             user = Models.Server.sign_up(name_obj.Text, surname_obj.Text, email_obj.Text, password_obj.Password);
 
-            Debug.WriteLine("successful signup going to sign in");
 
             Main_TeachingTip.IsOpen = false;
+            SignUp_TeachingTip.IsOpen = false;
 
-            if((bool)sign_up_radio_1_answer3.IsChecked && (bool)sign_up_radio_2_answer2.IsChecked && (bool)sign_up_radio_3_answer1.IsChecked)
+            if (user != null)
             {
-                user.answer(1, 10, 0, 3f, true);
-                user.answer(1, 21, 0, 3f, true);
-                user.answer(1, 31, 0, 3f, true);
+                if ((bool)sign_up_radio_1_answer3.IsChecked && (bool)sign_up_radio_2_answer2.IsChecked && (bool)sign_up_radio_3_answer1.IsChecked)
+                {
+                    user.answer(1, 10, 0, 3f, true);
+                    user.answer(1, 21, 0, 3f, true);
+                    user.answer(1, 31, 0, 3f, true);
 
-                chapter_1_nav.Visibility = Visibility.Visible;
-                test_1_nav.Visibility = Visibility.Visible;
+                    chapter_1_nav.Visibility = Visibility.Visible;
+                    test_1_nav.Visibility = Visibility.Visible;
 
+                }
+                else
+                {
+                    chapter_1_nav.Visibility = Visibility.Visible;
+                }
+
+
+                welcome_screen.Visibility = Visibility.Collapsed;
+                main_screen.Visibility = Visibility.Visible;
+                sign_out_button.Visibility = Visibility.Visible;
+                logged_in = true;
+                Main_TeachingTip.IsOpen = false;
+                SignUp_TeachingTip.IsOpen = false;
             }
             else
             {
-                chapter_1_nav.Visibility = Visibility.Visible;
+                email_obj.Text = "";
+                password_obj.Password = "";
+                name_obj.Text = "";
+                surname_obj.Text = "";
+                sign_up_2.Visibility = Visibility.Collapsed;
+                sign_up_1.Visibility = Visibility.Visible;
+                sign_up_radio_1.SelectedItem = null;
+                sign_up_radio_2.SelectedItem = null;
+                sign_up_radio_3.SelectedItem = null;
+                logged_in = false;
+                Main_TeachingTip.IsOpen = false;
+                SignUp_TeachingTip.IsOpen = true;
             }
-
-
-            welcome_screen.Visibility = Visibility.Collapsed;
-            main_screen.Visibility = Visibility.Visible;
-            sign_out_button.Visibility = Visibility.Visible;
-            logged_in = true;
-            Main_TeachingTip.IsOpen = false;
         }
 
         // Attributes for Windowing - Start (System Configuration DON'T Change) //

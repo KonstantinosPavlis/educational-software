@@ -27,7 +27,7 @@ namespace Educational_Software.Navigation_UI_Pages
         List<Boolean> question_list = new List<Boolean>();
         DateTime dateTime1;
         int time_delay = 0;
-        int answer_timer = 90;
+        int answer_timer = 10;
 
         public Quiz_3()
         {
@@ -161,13 +161,10 @@ namespace Educational_Software.Navigation_UI_Pages
                     question_3_empty.Visibility = Visibility.Collapsed;
                     NextButton.IsEnabled = false;
                     NextButton.Visibility = Visibility.Collapsed;
-                    System.Diagnostics.Debug.WriteLine("AAAAAAAAAAAAAAAAAAAAAAAAAAAA");
+                    Bottom_Text.Visibility = Visibility.Collapsed;
                     info_message.Severity = InfoBarSeverity.Success;
                     info_message.Title = "Επιτυχία";
                     info_message.Message = "Συγχαρητήρια! Περάσατε τη δοκιμασία !";
-                    //current_question_number = 11;
-
-                    System.Diagnostics.Debug.WriteLine("AAAAAAAAAAAAAAAAAAAAAAAAAAAA");
                 }
             }
         }
@@ -180,7 +177,6 @@ namespace Educational_Software.Navigation_UI_Pages
 
             if (current_question_number == 1)
             {
-                //Check if the answer is correct
                 question_1_radio.IsEnabled = false;
                 question_2_empty.Visibility = Visibility.Collapsed;
                 question_2_answered.Visibility = Visibility.Collapsed;
@@ -208,12 +204,11 @@ namespace Educational_Software.Navigation_UI_Pages
                     user.answer(3, 10, time_period_seconds, 0f, false);
                 }
                 current_question_number++;
-                question_number.Text = current_question_number.ToString();
+                question_number.Text = "2";
 
             }
             else if (current_question_number == 2)
             {
-                //Check if the answer is correct
 
                 question_3_empty.Visibility = Visibility.Collapsed;
                 question_3_answered.Visibility = Visibility.Collapsed;
@@ -275,12 +270,11 @@ namespace Educational_Software.Navigation_UI_Pages
 
                 ((Button)sender).Content = "Ολοκλήρωση";
                 current_question_number++;
-                question_number.Text = current_question_number.ToString();
+                question_number.Text = "3";
 
             }
             else if (current_question_number == 3)
             {
-                //Check if the answer is correct
 
                 if (question_list[0] == true && question_list[1] == true && time_delay == 0)
                 {
@@ -357,7 +351,7 @@ namespace Educational_Software.Navigation_UI_Pages
                     ((Button)sender).Content = "Επανάληψη";
                     info_message.Severity = InfoBarSeverity.Error;
                     info_message.Title = "Αποτυχία";
-                    info_message.Message = "Ίσως δυσκλοευτήκατε πολύ στις απαντήσεις. Προσπαθήστε ξανά.";
+                    info_message.Message = "Ίσως δυσκολευτήκατε πολύ στις απαντήσεις. Προσπαθήστε ξανά.";
                     current_question_number = 10;
                     user.remove_answer(3);
                 }
@@ -377,7 +371,6 @@ namespace Educational_Software.Navigation_UI_Pages
             }
             else if (current_question_number == 10)
             {
-                //Check if the answer is correct
                 question_1_empty.Visibility = Visibility.Collapsed;
                 question_1_answered.Visibility = Visibility.Collapsed;
                 question_1_radio.Visibility = Visibility.Visible;
@@ -400,12 +393,13 @@ namespace Educational_Software.Navigation_UI_Pages
                 question_3_radio_2.Visibility = Visibility.Collapsed;
                 question_3_radio_3.Visibility = Visibility.Collapsed;
                 ((Button)sender).Content = "Επόμενη";
-                current_question_number = 1;
-                question_number.Text = current_question_number.ToString();
+                question_number.Text = "1";
                 info_message.Severity = InfoBarSeverity.Warning;
                 info_message.Title = "Αναμονή Ολοκλήρωσης";
                 info_message.Message = "Απάντησε όλες τις ερωτήσεις του Quiz ώστε να ελεγθεί η πρόοδός σου";
+                current_question_number = 1;
                 question_list.Clear();
+                time_delay = 0;
             }
             else if (current_question_number == 11)
             {

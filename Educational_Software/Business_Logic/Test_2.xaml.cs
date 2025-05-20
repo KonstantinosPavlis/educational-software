@@ -46,10 +46,6 @@ namespace Educational_Software.Navigation_UI_Pages
 
             IEnumerable<float> scores = user.get_answers().Where(a=>a.section ==2).Select(t=>t.rating);
 
-            foreach (float scoped in scores) 
-            {
-                System.Diagnostics.Debug.WriteLine("OI APANTHSEIS EINAIbjmtopmrtp" + scoped.ToString());
-            }
 
 
 
@@ -69,7 +65,6 @@ namespace Educational_Software.Navigation_UI_Pages
 
                     question_3_1.Visibility = Visibility.Collapsed;
                     question_3_2.Visibility = Visibility.Visible;
-                    System.Diagnostics.Debug.WriteLine("1111111111111111111111111111111");
 
                 }
             }
@@ -79,6 +74,7 @@ namespace Educational_Software.Navigation_UI_Pages
                 test_2_completed.Visibility = Visibility.Visible;
                 completion_button.IsEnabled = false;
                 completion_button.Visibility = Visibility.Collapsed;
+                Bottom_Text.Visibility = Visibility.Collapsed;
                 info_message.Severity = InfoBarSeverity.Success;
                 info_message.Title = "Επιτυχία";
                 info_message.Message = "Έχετε περάσει τη δοκιμασία !";
@@ -236,10 +232,11 @@ namespace Educational_Software.Navigation_UI_Pages
                     info_message.Title = "Επιτυχία";
                     info_message.Message = "Συγχαρητήρια! Περάσατε τη δοκιμασία !";
                     question_1_1_radio.IsEnabled = false;
+                    question_1_2_radio.IsEnabled = false;
                     NegativeAnswer_checkbox.IsEnabled = false;
                     PositiveAnswer_checkbox.IsEnabled = false;
                     question_3_1_combobox.IsEnabled = false;
-                    //user.remove_answer(20);
+                    question_3_2_combobox.IsEnabled = false;
                     user.answer(2, 4, time_period_seconds, scores.Sum(), true);
 
                 }

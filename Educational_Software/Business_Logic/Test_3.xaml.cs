@@ -66,6 +66,7 @@ namespace Educational_Software.Navigation_UI_Pages
                 test_3_completed.Visibility = Visibility.Visible;
                 completion_button.IsEnabled = false;
                 completion_button.Visibility = Visibility.Collapsed;
+                Bottom_Text.Visibility = Visibility.Collapsed;
                 info_message.Severity = InfoBarSeverity.Success;
                 info_message.Title = "Επιτυχία";
                 info_message.Message = "Έχετε περάσει τη δοκιμασία !";
@@ -223,9 +224,11 @@ namespace Educational_Software.Navigation_UI_Pages
                     info_message.Title = "Επιτυχία";
                     info_message.Message = "Συγχαρητήρια! Περάσατε τη δοκιμασία !";
                     question_1_1_radio.IsEnabled = false;
+                    question_1_2_radio.IsEnabled = false;
                     NegativeAnswer_checkbox.IsEnabled = false;
                     PositiveAnswer_checkbox.IsEnabled = false;
                     question_3_1_combobox.IsEnabled = false;
+                    question_3_2_combobox.IsEnabled = false;
                     user.answer(3, 4, time_period_seconds, scores.Sum(), true);
 
                 }

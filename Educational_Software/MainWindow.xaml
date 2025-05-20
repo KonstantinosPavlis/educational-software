@@ -84,7 +84,6 @@
 
                     <StackPanel x:Name="sign_up_1" Visibility="Visible" Orientation="Vertical" HorizontalAlignment="Center" Spacing="3" Margin="0, 10, 15 ,0">
 
-                        <!-- <TextBlock Text="Συμπληρώστε όλα τα πεδία" FontWeight="SemiBold" HorizontalAlignment="Center" Margin="0,0,0, 15"/> -->
                         <TextBlock Text="Email" Margin="0, 10, 0,0" Width="300"/>
                         <TextBox x:Name="email_obj" PlaceholderText="user@example.com"/>
                         <TextBlock Text="Κωδικός" Margin="0, 10, 0,0" />
@@ -256,9 +255,21 @@
                 
             </NavigationView>
 
-            <TeachingTip x:Name="Main_TeachingTip" x:FieldModifier="internal"
+            <TeachingTip x:Name="Main_TeachingTip"
                    Title="Αποτυχία σύνδεσης"
                    Subtitle="Το Email ή/και το Password είναι λανθασμένα. Προσπάθησε ξανά !"
+                   HorizontalContentAlignment="Center"
+                   PreferredPlacement="Auto"
+                   PlacementMargin="20"
+                   IsLightDismissEnabled="True"
+                   CloseButtonContent="ΟΚ"
+                   Grid.Row="1"
+                   IsEnabled="True"
+                   />
+
+            <TeachingTip x:Name="SignUp_TeachingTip"
+                   Title="Αποτυχία εγγραφής"
+                   Subtitle="Το Email έχει χρησιμοποιηθεί ξανά. Προσπάθησε ξανά !"
                    HorizontalContentAlignment="Center"
                    PreferredPlacement="Auto"
                    PlacementMargin="20"
