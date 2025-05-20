@@ -21,6 +21,7 @@ namespace Educational_Software.Navigation_UI_Pages
     public sealed partial class Quiz_2 : Page
     {
         User user;
+        MainWindow mainWindow;
         int current_question_number = 1;
         List<Boolean> question_list = new List<Boolean>();
         DateTime dateTime1;
@@ -35,9 +36,10 @@ namespace Educational_Software.Navigation_UI_Pages
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            if (e.Parameter != null)
+            if (e.Parameter is object[] parameters && parameters.Length == 2)
             {
-                user = e.Parameter as User;
+                user = parameters[0] as User;
+                mainWindow = parameters[1] as MainWindow;
             }
             System.Diagnostics.Debug.WriteLine("OI APANTHSEIS EINAIQuiz2" + user.get_answers().Where(a=>a.section == 2 && a.question!=4).Count());
 
@@ -53,6 +55,7 @@ namespace Educational_Software.Navigation_UI_Pages
 
                 if (user.get_answers().Count(a => a.section == 2 && (a.question == 21 || a.question == 22)) == 0)
                 {
+                    question_2_empty.Visibility = Visibility.Collapsed;
                     if (user.get_answers().Count(a => a.section == 2 && a.question == 10 && a.rating == 1f) > 0)
                     {
                         question_2_radio_1.Visibility = Visibility.Visible;
@@ -81,6 +84,7 @@ namespace Educational_Software.Navigation_UI_Pages
                     current_question_number = 3;
                     var answer_question = user.get_answers().FirstOrDefault(a => a.question == 21 || a.question == 22);
 
+                    question_3_empty.Visibility = Visibility.Collapsed;
                     if (answer_question.question == 21 && answer_question.rating == 1f)
                     {
                         question_3_radio_1.Visibility = Visibility.Visible;
@@ -181,6 +185,7 @@ namespace Educational_Software.Navigation_UI_Pages
                 //Check if the answer is correct
                 question_1_radio.IsEnabled = false;
                 question_2_empty.Visibility = Visibility.Collapsed;
+                question_2_answered.Visibility = Visibility.Collapsed;
 
                 if ((bool)question_1_radio_answer2.IsChecked && time_period_seconds < answer_timer)
                 {
@@ -213,10 +218,13 @@ namespace Educational_Software.Navigation_UI_Pages
                 //Check if the answer is correct
 
                 question_3_empty.Visibility = Visibility.Collapsed;
+                question_3_answered.Visibility = Visibility.Collapsed;
+
+                question_2_radio_1.IsEnabled = false;
+                question_2_radio_2.IsEnabled = false;
 
                 if (question_list[0] == true && time_delay == 0)
                 {
-                    question_2_radio_1.IsEnabled = false;
                     if ((bool)question_2_radio1_answer1.IsChecked && time_period_seconds < answer_timer)
                     {
                         question_3_radio_1.Visibility = Visibility.Visible;
@@ -278,7 +286,6 @@ namespace Educational_Software.Navigation_UI_Pages
 
                 if (question_list[0] == true && question_list[1] == true && time_delay == 0)
                 {
-                    question_3_radio_1.IsEnabled = false;
                     if ((bool)question_3_radio1_answer1.IsChecked && time_period_seconds < answer_timer)
                     {
                         question_list.Add(true);
@@ -298,7 +305,6 @@ namespace Educational_Software.Navigation_UI_Pages
                 }
                 else if ((question_list[0] == true && question_list[1] == false) || (question_list[0] == false && question_list[1] == true) || (question_list[0] == true && question_list[1] == true && time_delay == 1))
                 {
-                    question_3_radio_2.IsEnabled = false;
                     if ((bool)question_3_radio2_answer2.IsChecked && time_period_seconds < answer_timer)
                     {
                         question_list.Add(true);
@@ -318,7 +324,6 @@ namespace Educational_Software.Navigation_UI_Pages
                 }
                 else if (question_list[0] == false && question_list[1] == false || (question_list[0] == true && question_list[1] == true && time_delay == 2))
                 {
-                    question_3_radio_3.IsEnabled = false;
                     if ((bool)question_3_radio3_answer1.IsChecked && time_period_seconds < answer_timer)
                     {
                         question_list.Add(true);
@@ -338,6 +343,8 @@ namespace Educational_Software.Navigation_UI_Pages
                 }
 
                 question_3_radio_1.IsEnabled = false;
+                question_3_radio_2.IsEnabled = false;
+                question_3_radio_3.IsEnabled = false;
                 if (question_list.Count(f => f == false) >= question_list.Count(t => t == true))
                 {
                     ((Button)sender).Content = "Επανάληψη";
@@ -359,6 +366,8 @@ namespace Educational_Software.Navigation_UI_Pages
                 else
                 {
                     ((Button)sender).Content = "Ολοκλήρωση";
+                    ((Button)sender).IsEnabled = false;
+                    mainWindow.test_2_nav.Visibility = Visibility.Visible;
                     info_message.Severity = InfoBarSeverity.Success;
                     info_message.Title = "Επιτυχία";
                     info_message.Message = "Συγχαρητήρια! Περάσατε τη δοκιμασία !";
@@ -371,26 +380,35 @@ namespace Educational_Software.Navigation_UI_Pages
             else if (current_question_number == 10)
             {
                 //Check if the answer is correct
+                question_1_empty.Visibility = Visibility.Collapsed;
+                question_1_answered.Visibility = Visibility.Collapsed;
+                question_1_radio.Visibility = Visibility.Visible;
+                
                 question_1_radio.SelectedItem = null;
                 question_2_radio_1.SelectedItem = null;
                 question_2_radio_2.SelectedItem = null;
                 question_3_radio_1.SelectedItem = null;
                 question_3_radio_2.SelectedItem = null;
                 question_3_radio_3.SelectedItem = null;
+
                 question_1_radio.IsEnabled = true;
                 question_2_empty.Visibility = Visibility.Visible;
+                question_2_answered.Visibility = Visibility.Collapsed;
                 question_2_radio_1.Visibility = Visibility.Collapsed;
                 question_2_radio_2.Visibility = Visibility.Collapsed;
                 question_3_empty.Visibility = Visibility.Visible;
+                question_3_answered.Visibility = Visibility.Collapsed;
                 question_3_radio_1.Visibility = Visibility.Collapsed;
                 question_3_radio_2.Visibility = Visibility.Collapsed;
                 question_3_radio_3.Visibility = Visibility.Collapsed;
+
                 ((Button)sender).Content = "Επόμενη";
                 current_question_number = 1;
                 question_number.Text = current_question_number.ToString();
                 info_message.Severity = InfoBarSeverity.Warning;
                 info_message.Title = "Αναμονή Ολοκλήρωσης";
                 info_message.Message = "Απάντησε όλες τις ερωτήσεις του Quiz ώστε να ελεγθεί η πρόοδός σου";
+                question_list.Clear();
             }
             else if (current_question_number == 11)
             {

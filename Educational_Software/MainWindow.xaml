@@ -18,7 +18,7 @@
         <StackPanel  Grid.Row="0" Orientation="Horizontal" Visibility="Visible" Spacing="15" Height="30"  x:Name="TitleBar" HorizontalAlignment="Stretch"  VerticalAlignment="Top" Margin="0, 0, 0, 7">
             <ImageIcon Height="18" Width="18" Margin="15, 0, 0, 0" VerticalAlignment="Center" HorizontalAlignment="Center" Source="Assets/light_house.png"/>
             <TextBlock VerticalAlignment="Center" Text="Educational Software" />
-            <TextBlock Visibility="Visible" VerticalAlignment="Center" Text="PREVIEW" Foreground="Gray" />
+            <TextBlock Visibility="Collapsed" VerticalAlignment="Center" Text="PREVIEW" Foreground="Gray" />
         </StackPanel>
 
         <!-- Welcome Screen Grid  -->
@@ -170,8 +170,8 @@
                 <NavigationView.MenuItems>
                     
                     <NavigationViewItem x:Name="home_nav" Icon="Home" Content="Αρχική" Tag="start" IsSelected="True"/>
-                    
-                    <NavigationViewItem x:Name="chapter_1_nav" Content="Ενότητα 1" Icon="Library" SelectsOnInvoked="False">
+
+                    <NavigationViewItem x:Name="chapter_1_nav" x:FieldModifier="internal" Visibility="Collapsed" Content="Ενότητα 1" Icon="Library" SelectsOnInvoked="False">
                         <NavigationViewItem.MenuItems>
                             <NavigationViewItem Content="Ο Φάρος" Tag="edu_1" >
                                 <NavigationViewItem.Icon>
@@ -186,13 +186,13 @@
                         </NavigationViewItem.MenuItems>
                     </NavigationViewItem>
 
-                    <NavigationViewItem x:Name="test_1_nav" Content="Τεστ 1ης Ενότητας" Tag="test_1">
+                    <NavigationViewItem x:Name="test_1_nav" x:FieldModifier="internal" Visibility="Collapsed" Content="Τεστ 1ης Ενότητας" Tag="test_1">
                         <NavigationViewItem.Icon>
                             <FontIcon Glyph="&#xEE56;"/>
                         </NavigationViewItem.Icon>
                     </NavigationViewItem>
 
-                    <NavigationViewItem x:Name="chapter_2_nav" Content="Ενότητα 2" Icon="Library" SelectsOnInvoked="False">
+                    <NavigationViewItem x:Name="chapter_2_nav" x:FieldModifier="internal" Visibility="Collapsed" Content="Ενότητα 2" Icon="Library" SelectsOnInvoked="False">
                         <NavigationViewItem.MenuItems>
                             <NavigationViewItem Content="Το Δέλτα του Έβρου" Tag="edu_2" >
                                 <NavigationViewItem.Icon>
@@ -207,13 +207,13 @@
                         </NavigationViewItem.MenuItems>
                     </NavigationViewItem>
 
-                    <NavigationViewItem x:Name="test_2_nav" Content="Τεστ 2ης Ενότητας" Tag="test_2">
+                    <NavigationViewItem x:Name="test_2_nav" x:FieldModifier="internal" Visibility="Collapsed" Content="Τεστ 2ης Ενότητας" Tag="test_2">
                         <NavigationViewItem.Icon>
                             <FontIcon Glyph="&#xEE56;"/>
                         </NavigationViewItem.Icon>
                     </NavigationViewItem>
 
-                    <NavigationViewItem x:Name="chapter_3_nav" Content="Ενότητα 3" Icon="Library" SelectsOnInvoked="False" >
+                    <NavigationViewItem x:Name="chapter_3_nav" x:FieldModifier="internal" Visibility="Collapsed" Content="Ενότητα 3" Icon="Library" SelectsOnInvoked="False" >
                         <NavigationViewItem.MenuItems>
                             <NavigationViewItem Content="Παραδοσιακή Αρχιτεκτονική" Tag="edu_3" >
                                 <NavigationViewItem.Icon>
@@ -228,7 +228,7 @@
                         </NavigationViewItem.MenuItems>
                     </NavigationViewItem>
 
-                    <NavigationViewItem x:Name="test_3_nav" Content="Τεστ 3ης Ενότητας" Tag="test_3">
+                    <NavigationViewItem x:Name="test_3_nav" x:FieldModifier="internal" Visibility="Collapsed" Content="Τεστ 3ης Ενότητας" Tag="test_3">
                         <NavigationViewItem.Icon>
                             <FontIcon Glyph="&#xEE56;"/>
                         </NavigationViewItem.Icon>
