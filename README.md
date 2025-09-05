@@ -6,9 +6,9 @@
 
 _Exploration of Alexandroupolis_ is a digital learning experience that guides users through the rich cultural and ecological heritage of the city. Through engaging lessons, quizzes, and performance tracking, learners can explore:
 
-- 🗼 The Lighthouse and Port of Alexandroupolis  
-- 🐦 The Evros Delta and its unique birdlife  
-- 🏛️ Traditional Architecture of the region  
+- 🗼 The Lighthouse of Alexandroupolis
+- 🐦 The Evros Delta and its diverse ecosystem of plants and animals
+- 🏛️ Traditional Architecture of the region
 
 The app encourages active participation through quizzes and unlockable tests, rewarding users for correct answers and progress.
 
@@ -29,7 +29,7 @@ The app encourages active participation through quizzes and unlockable tests, re
 
 ## 🚀 Purpose
 
-This software was created within the context of an educational initiative to support experiential learning and promote digital interaction with local cultural and natural environments. It is offered solely for academic and research use.
+This software was created within the context of an educational initiative to support experiential learning and promote digital interaction with local cultural and natural environments. It is developed solely for academic and research purposes.
 
 ## 📷 Screenshots
 
