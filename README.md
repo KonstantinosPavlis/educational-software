@@ -33,7 +33,7 @@ This software was created within the context of an educational initiative to sup
 
 ## 📷 Screenshots / Video
 
-> _Sample Screens:_  
+_Sample Screens:_  
 > <img width="200" height="140" alt="Edu_Soft_1" src="https://github.com/user-attachments/assets/402e869c-a1c3-486e-bbde-8c784005dee2" />
 > <img width="200" height="140" alt="Edu_Soft_2" src="https://github.com/user-attachments/assets/24a95101-96ca-4f81-803d-8b15dc06f12e" />
 > <img width="200" height="140" alt="Edu_Soft_3" src="https://github.com/user-attachments/assets/b8c7b131-bebb-494c-84a4-91a550357f6f" />
