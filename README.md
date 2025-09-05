@@ -42,10 +42,6 @@ This software was created within the context of an educational initiative to sup
 > <img width="200" height="140" alt="Edu_Soft_6" src="https://github.com/user-attachments/assets/fb1d5231-7fcc-4840-97b3-7eb1fa10c0f5" />
 
 
-
-
-
-
 # 🔒 Code Ownership & Usage Terms
 
 This project was created and maintained by:
