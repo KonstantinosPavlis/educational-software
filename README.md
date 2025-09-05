@@ -31,7 +31,7 @@ The app encourages active participation through quizzes and unlockable tests, re
 
 This software was created within the context of an educational initiative to support experiential learning and promote digital interaction with local cultural and natural environments. It is developed solely for academic and research purposes.
 
-## 📷 Screenshots
+## 📷 Screenshots / Video
 
 > _Sample Screens:_  
 > <img width="200" height="140" alt="Edu_Soft_1" src="https://github.com/user-attachments/assets/402e869c-a1c3-486e-bbde-8c784005dee2" />
@@ -41,6 +41,16 @@ This software was created within the context of an educational initiative to sup
 > <img width="200" height="140" alt="Edu_Soft_5" src="https://github.com/user-attachments/assets/e1801184-c698-4438-9c33-f733a6f95525" />
 > <img width="200" height="140" alt="Edu_Soft_6" src="https://github.com/user-attachments/assets/fb1d5231-7fcc-4840-97b3-7eb1fa10c0f5" />
 
+### 🧰 Prerequisites
+
+- 💻 Windows 10 or later  
+- ⚙️ .NET Framework (version X.X)  
+- 🗄️ SQLite 
+
+### 📦 Installation
+
+git clone https://github.com/PavlisKostas/xxx.git
+cd real-estate-app
 
 # 🔒 Code Ownership & Usage Terms
 
