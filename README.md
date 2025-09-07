@@ -31,32 +31,60 @@ The app encourages active participation through quizzes and unlockable tests, re
 
 This software was created within the context of an educational initiative to support experiential learning and promote digital interaction with local cultural and natural environments. It is developed solely for academic and research purposes.
 
+
+## 🧰 Prerequisites
+
+Before building and running this application, ensure you have the following installed:
+
+- **Windows 10 version 1809 or later** (Windows 11 recommended)
+- **Visual Studio 2022** (version 17.1 or newer)
+- Installed Workloads:
+  - .NET Desktop Development
+  - Windows App SDK C# Templates
+- **.NET SDK** (.NET 8)
+- **Developer Mode** enabled in Windows (required for unpackaged apps)
+
+## 📦 Installation
+
+Follow these steps to install and run the application:
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/your-username/your-repo-name.git
+   cd your-repo-name
+2. **Open the project in Visual Studio 2022** using the `.sln` file
+3. **Confirm that the following NuGet packages are installed:**
+    - Microsoft.WindowsAppSDK
+    - System.Data.SQLite
+    - Microsoft.Windows.SDK.BuildTools
+4. **Verify Target Framework**
+     In your `.csproj` file, ensure the framework is set correctly:
+   
+     ```xml
+     <TargetFramework>net8.0-windows10.0.19041.0</TargetFramework>
+   
+6. **Run the application** as _Unpackaged app_
+
 ## 📷 Screenshots / Video
 
-_Sample Screens:_  
-> <img width="200" height="140" alt="Edu_Soft_1" src="https://github.com/user-attachments/assets/402e869c-a1c3-486e-bbde-8c784005dee2" />
-> <img width="200" height="140" alt="Edu_Soft_2" src="https://github.com/user-attachments/assets/24a95101-96ca-4f81-803d-8b15dc06f12e" />
-> <img width="200" height="140" alt="Edu_Soft_3" src="https://github.com/user-attachments/assets/b8c7b131-bebb-494c-84a4-91a550357f6f" />
-> <img width="200" height="140" alt="Edu_Soft_4" src="https://github.com/user-attachments/assets/649c353e-96f5-4e94-8a51-d8813fd71bc3" />
-> <img width="200" height="140" alt="Edu_Soft_5" src="https://github.com/user-attachments/assets/e1801184-c698-4438-9c33-f733a6f95525" />
-> <img width="200" height="140" alt="Edu_Soft_6" src="https://github.com/user-attachments/assets/fb1d5231-7fcc-4840-97b3-7eb1fa10c0f5" />
+**_App Screens:_**  
+> <img width="250" height="160" alt="Edu_Soft_1" src="https://github.com/user-attachments/assets/402e869c-a1c3-486e-bbde-8c784005dee2" />
+> <img width="250" height="160" alt="Edu_Soft_2" src="https://github.com/user-attachments/assets/24a95101-96ca-4f81-803d-8b15dc06f12e" />
+> <img width="250" height="160" alt="Edu_Soft_3" src="https://github.com/user-attachments/assets/b8c7b131-bebb-494c-84a4-91a550357f6f" />
+> <img width="250" height="160" alt="Edu_Soft_4" src="https://github.com/user-attachments/assets/649c353e-96f5-4e94-8a51-d8813fd71bc3" />
+> <img width="250" height="160" alt="Edu_Soft_5" src="https://github.com/user-attachments/assets/e1801184-c698-4438-9c33-f733a6f95525" />
+> <img width="250" height="160" alt="Edu_Soft_6" src="https://github.com/user-attachments/assets/fb1d5231-7fcc-4840-97b3-7eb1fa10c0f5" />
 
-### 🧰 Prerequisites
+**_Demo Video:_**
 
-- 💻 Windows 10 or later  
-- ⚙️ .NET Framework (version X.X)  
-- 🗄️ SQLite 
+> https://github.com/user-attachments/assets/7f491709-9fc4-4b58-88f9-ecf5f5f30d20
 
-### 📦 Installation
-
-git clone https://github.com/PavlisKostas/xxx.git
-cd real-estate-app
 
 # 🔒 Code Ownership & Usage Terms
 
 This project was created and maintained by:
 
-- Konstantinos Pavlis (@PavlisKostas)
+- Konstantinos Pavlis (@kostantinos-pavlis)
 - Theofanis Tzoumakas (@theofanistzoumakas)
 - Michael-Panagiotis Kapetanios (@KapetaniosMP)
 
