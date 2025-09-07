@@ -22,6 +22,7 @@ namespace Educational_Software.Models
                         "Answer ( studentId INTEGER, section INTEGER, question INTEGER, time INTEGER, rating REAL, userAnswer BOOLEAN)";
             execute_query(connectionString, createTableQuery0);
             execute_query(connectionString, createTableQuery1);
+
         }
 
         public static bool add_user(string name, string lastname, string email, string password)
