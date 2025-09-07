@@ -50,8 +50,8 @@ Follow these steps to install and run the application:
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/your-username/your-repo-name.git
-   cd your-repo-name
+   git clone https://github.com/KonstantinosPavlis/educational-software.git
+   cd educational-software
 2. **Open the project in Visual Studio 2022** using the `.sln` file
 3. **Confirm that the following NuGet packages are installed:**
     - Microsoft.WindowsAppSDK
@@ -84,7 +84,7 @@ Follow these steps to install and run the application:
 
 This project was created and maintained by:
 
-- Konstantinos Pavlis (@kostantinos-pavlis)
+- Konstantinos Pavlis (@KonstantinosPavlis)
 - Theofanis Tzoumakas (@theofanistzoumakas)
 - Michael-Panagiotis Kapetanios (@KapetaniosMP)
 
@@ -93,7 +93,7 @@ No part of this codebase may be copied, reproduced, modified, distributed, or us
 
 Any attempt to use, republish, or incorporate this code into other projects—whether commercial or non-commercial—without prior consent may result in legal action.
 
-For licensing inquiries or collaboration requests, please contact via Discord: @kostas25_ .
+For licensing inquiries or collaboration requests, please contact via email: konstantinos1125 _at_ gmail.com .
 
 © 2025 Konstantinos Pavlis, Theofanis Tzoumakas, Michael-Panagiotis Kapetanios. All rights reserved.
 
