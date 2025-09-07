@@ -48,9 +48,9 @@ Before building and running this application, ensure you have the following inst
 
 Follow these steps to install and run the application:
 
-1. **Clone the repository**
+1. **Clone the repository (or download and decompress the ZIP file)**
    ```bash
-   git clone https://github.com/KonstantinosPavlis/educational-software.git
+   git clone https://github.com/kpavlis/educational-software.git
    cd educational-software
 2. **Open the project in Visual Studio 2022** using the `.sln` file
 3. **Confirm that the following NuGet packages are installed:**
