@@ -2,6 +2,9 @@
 
 **An interactive educational application designed to introduce users to the culture, architecture, and natural environment of Alexandroupolis, Greece.**
 
+> ℹ️ This project is not open source and does not grant any usage rights.
+> For usage terms and legal information, see [Code Ownership & Usage Terms](#-code-ownership--usage-terms).
+
 ## 📘 Overview
 
 _Exploration of Alexandroupolis_ is a digital learning experience that guides users through the rich cultural and ecological heritage of the city. Through engaging lessons, quizzes, and performance tracking, learners can explore:
