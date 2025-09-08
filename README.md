@@ -64,6 +64,7 @@ Follow these steps to install and run the application:
      <TargetFramework>net8.0-windows10.0.19041.0</TargetFramework>
    
 6. **Run the application** as _Unpackaged app_
+7. 
 ## 📷 Screenshots / Video
 
 **_App Screens:_**  
