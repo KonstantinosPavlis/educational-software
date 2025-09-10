@@ -30,7 +30,7 @@ The app encourages active participation through quizzes and unlockable tests, re
 - C# for the Businnes Logic
 - SQLite for the local database
 
-## 🚀 Purpose
+## 🎯 Purpose
 
 This software was created within the context of an educational initiative to support experiential learning and promote digital interaction with local cultural and natural environments. **It is developed solely for academic and research purposes.**
 
