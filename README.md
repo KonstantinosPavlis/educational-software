@@ -2,6 +2,9 @@
 
 **An interactive educational application designed to introduce users to the culture, architecture, and natural environment of Alexandroupolis, Greece.**
 
+> ℹ️ This project is not open source and does not grant any usage rights.
+> For usage terms and legal information, see [Code Ownership & Usage Terms](#-code-ownership--usage-terms).
+
 ## 📘 Overview
 
 _Exploration of Alexandroupolis_ is a digital learning experience that guides users through the rich cultural and ecological heritage of the city. Through engaging lessons, quizzes, and performance tracking, learners can explore:
@@ -29,8 +32,7 @@ The app encourages active participation through quizzes and unlockable tests, re
 
 ## 🚀 Purpose
 
-This software was created within the context of an educational initiative to support experiential learning and promote digital interaction with local cultural and natural environments. It is developed solely for academic and research purposes.
-
+This software was created within the context of an educational initiative to support experiential learning and promote digital interaction with local cultural and natural environments. **It is developed solely for academic and research purposes.**
 
 ## 🧰 Prerequisites
 
@@ -77,8 +79,7 @@ Follow these steps to install and run the application:
 
 **_Demo Video:_**
 
-> https://github.com/user-attachments/assets/7f491709-9fc4-4b58-88f9-ecf5f5f30d20
-
+> https://github.com/user-attachments/assets/d6803f8a-5a50-40a2-bca3-78b7a9975674
 
 # 🔒 Code Ownership & Usage Terms
 
@@ -96,4 +97,3 @@ Any attempt to use, republish, or incorporate this code into other projects—wh
 For licensing inquiries or collaboration requests, please contact via email: konstantinos1125 _at_ gmail.com .
 
 © 2025 Konstantinos Pavlis, Theofanis Tzoumakas, Michael-Panagiotis Kapetanios. All rights reserved.
-
