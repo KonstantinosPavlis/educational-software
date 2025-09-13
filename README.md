@@ -27,7 +27,7 @@ The app encourages active participation through quizzes and unlockable tests, re
 
 - WindowsAppSDK / WinUI3
 - XAML for the UI
-- C# for the Businnes Logic
+- C# for Business Logic
 - SQLite for the local database
 
 ## 🎯 Purpose
