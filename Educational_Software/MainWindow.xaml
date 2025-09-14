@@ -165,7 +165,7 @@
             <Button x:Name="sign_out_button" Visibility="Collapsed" Content="Αποσύνδεση" Margin="0, 0, 17, 7" Height="30" FontSize="12" FontWeight="SemiBold" Click="Sign_out" HorizontalAlignment="Right"/>
                 
 
-            <NavigationView x:Name="navigation_element" SelectionChanged="nv_SelectionChanged" Grid.Row="1" IsBackButtonVisible="Collapsed" IsSettingsVisible="False" IsPaneVisible="True" IsPaneToggleButtonVisible="False" >
+            <NavigationView x:Name="navigation_element" SelectionChanged="nv_SelectionChanged" Grid.Row="1" IsBackButtonVisible="Collapsed" IsSettingsVisible="False" IsPaneVisible="True" IsPaneToggleButtonVisible="True" >
                 <NavigationView.MenuItems>
                     
                     <NavigationViewItem x:Name="home_nav" Icon="Home" Content="Αρχική" Tag="start" IsSelected="True"/>
