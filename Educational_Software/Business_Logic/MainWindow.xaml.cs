@@ -308,7 +308,7 @@ namespace Educational_Software
             {
 
                 double dheight = height / 1.35;
-                double dwidth = width / 1.2;
+                double dwidth = width / 2.4;
 
                 height = (int)dheight;
                 width = (int)dwidth;
