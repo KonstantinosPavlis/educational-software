@@ -27,10 +27,10 @@ The app encourages active participation through quizzes and unlockable tests, re
 
 - WindowsAppSDK / WinUI3
 - XAML for the UI
-- C# for the Businnes Logic
+- C# for Business Logic
 - SQLite for the local database
 
-## 🚀 Purpose
+## 🎯 Purpose
 
 This software was created within the context of an educational initiative to support experiential learning and promote digital interaction with local cultural and natural environments. **It is developed solely for academic and research purposes.**
 
@@ -43,7 +43,7 @@ Before building and running this application, ensure you have the following inst
 - Installed Workloads:
   - .NET Desktop Development
   - Windows App SDK C# Templates
-- **.NET SDK** (.NET 8)
+- **.NET SDK** (version 8)
 - **Developer Mode** enabled in Windows
 
 ## 📦 Installation
@@ -56,9 +56,10 @@ Follow these steps to install and run the application:
    cd educational-software
 2. **Open the project in Visual Studio 2022** using the `.sln` file
 3. **Confirm that the following NuGet packages are installed:**
-    - Microsoft.WindowsAppSDK
-    - Microsoft.Windows.SDK.BuildTools
-    - System.Data.SQLite (version **1.0.119**) 
+    - Microsoft.WindowsAppSDK (version **10.0.26100.x**)
+    - Microsoft.Windows.SDK.BuildTools (version **1.8.x**)
+    - System.Data.SQLite (version **2.x.x**)
+    - SQLitePCLRaw.bundle_e_sqlite3 (version **3.x.x**)
 4. **Verify Target Framework**
      In your `.csproj` file, ensure the framework is set correctly:
    
