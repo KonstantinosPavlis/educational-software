@@ -62,7 +62,10 @@
                     <TextBlock Text="2." FontSize="50" FontWeight="SemiBold" HorizontalAlignment="Center" VerticalAlignment="Center" Width="50" Margin="0, 0, 20, 0" />
                     <Border Grid.Column="1" CornerRadius="12" BorderThickness="1" BorderBrush="Aquamarine" Padding="15" Background="AliceBlue">
                         <StackPanel>
-                            <RadioButtons x:Name="question_2_radio_1" Header="Ποια είναι η εμβέλεια της φωτεινής δέσμης του φάρου;" MaxColumns="3" Visibility="Collapsed">
+                            <RadioButtons x:Name="question_2_radio_1" MaxColumns="3" Visibility="Collapsed">
+                                <RadioButtons.Header>
+                                    <TextBlock Text="Ποια είναι η εμβέλεια της φωτεινής δέσμης του φάρου;" TextWrapping="Wrap" />
+                                </RadioButtons.Header>
                                 <RadioButton x:Name="question_2_radio1_answer1" Content="12 ναυτικά μίλια" />
                                 <RadioButton x:Name="question_2_radio1_answer2" Content="28 ναυτικά μίλια" />
                                 <RadioButton x:Name="question_2_radio1_answer3" Content="24 ναυτικά μίλια" />

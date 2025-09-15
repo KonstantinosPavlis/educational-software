@@ -21,7 +21,7 @@
                 <FontIcon Glyph="&#xEE56;" FontSize="42"/>
                 <TextBlock Text="Τεστ 1ης Ενότητας" FontSize="25" FontWeight="SemiBold" VerticalAlignment="Center"/>
             </StackPanel>
-            <TextBlock Text="Ερωτήσεις για την Ενότητα 1 και όλες τις προηγούμενες ενότητες" FontSize="16" FontWeight="SemiBold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <TextBlock Text="Ερωτήσεις για την Ενότητα 1 και όλες τις προηγούμενες ενότητες" FontSize="16" FontWeight="SemiBold" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center" TextWrapping="WrapWholeWords"/>
         </StackPanel>
 
 
@@ -165,7 +165,7 @@
             </Grid.ColumnDefinitions>
 
 
-            <TextBlock x:Name="Bottom_Text" Text="Πάτησε το κουμπί ώστε να ελεγχθεί η ορθότητα των απαντήσεων" FontWeight="SemiBold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <TextBlock x:Name="Bottom_Text" Text="Πάτησε το κουμπί ώστε να ελεγχθεί η ορθότητα των απαντήσεων" FontWeight="SemiBold" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center" TextWrapping="WrapWholeWords"/>
 
             <Button x:Name="completion_button" Grid.Column="1" VerticalAlignment="Bottom" Content="Ολοκλήρωση" Style="{StaticResource AccentButtonStyle}" Width="180"  Click="Complete_button_Click"/>
         </Grid>
