@@ -46,7 +46,7 @@
         </ScrollViewer>
 
         <StackPanel Grid.Row="2" Padding="0, 15,0,15" Background="{StaticResource AcrylicBackgroundFillColorBaseBrush}">
-            <TextBlock Text="Developed with ❤️ for Department of Informatics - University of Piraeus" FontSize="15" FontWeight="SemiBold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <TextBlock Text="Developed with ❤️ for Department of Informatics - University of Piraeus" FontSize="15" FontWeight="SemiBold" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center" TextWrapping="WrapWholeWords"/>
         </StackPanel>
 
     </Grid>

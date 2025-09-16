@@ -21,7 +21,7 @@
                 <FontIcon Glyph="&#xE8FD;" FontSize="42"/>
                 <TextBlock Text="Quiz 2" FontSize="25" FontWeight="SemiBold" VerticalAlignment="Center"/>
             </StackPanel>
-            <TextBlock Text="Ερωτήσεις για την Ενότητα 2 - Το Δέλτα του Έβρου" FontSize="16" FontWeight="SemiBold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <TextBlock Text="Ερωτήσεις για την Ενότητα 2 - Το Δέλτα του Έβρου" FontSize="16" FontWeight="SemiBold" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center" TextWrapping="WrapWholeWords"/>
         </StackPanel>
 
 
@@ -43,7 +43,10 @@
                     <TextBlock Text="1." FontSize="50" FontWeight="SemiBold" HorizontalAlignment="Center" VerticalAlignment="Center" Width="50" Margin="0, 0, 20, 0" />
                     <Border Grid.Column="1" CornerRadius="12" BorderThickness="1" BorderBrush="Aquamarine" Padding="15" Background="AliceBlue" >
                         <StackPanel>
-                            <RadioButtons x:Name="question_1_radio" Header="Ποια είναι η συνολική έκταση του Εθνικού Πάρκου Δέλτα Έβρου;" MaxColumns="3" >
+                            <RadioButtons x:Name="question_1_radio" MaxColumns="3" >
+                                <RadioButtons.Header>
+                                    <TextBlock Text="Ποια είναι η συνολική έκταση του Εθνικού Πάρκου Δέλτα Έβρου;" TextWrapping="Wrap" />
+                                </RadioButtons.Header>
                                 <RadioButton x:Name="question_1_radio_answer1" Content="95.000 στρέμματα" />
                                 <RadioButton x:Name="question_1_radio_answer2" Content="200.000 στρέμματα" />
                                 <RadioButton x:Name="question_1_radio_answer3" Content="150.000 στρέμματα" />
@@ -62,12 +65,18 @@
                     <TextBlock Text="2." FontSize="50" FontWeight="SemiBold" HorizontalAlignment="Center" VerticalAlignment="Center" Width="50" Margin="0, 0, 20, 0" />
                     <Border Grid.Column="1" CornerRadius="12" BorderThickness="1" BorderBrush="Aquamarine" Padding="15" Background="AliceBlue">
                         <StackPanel>
-                            <RadioButtons x:Name="question_2_radio_1" Header="Πόσα είδη αμφιβίων και ερπετών έχουν καταγραφεί στο Δέλτα Έβρου;" MaxColumns="3" Visibility="Collapsed">
+                            <RadioButtons x:Name="question_2_radio_1" MaxColumns="3" Visibility="Collapsed">
+                                <RadioButtons.Header>
+                                    <TextBlock Text="Πόσα είδη αμφιβίων και ερπετών έχουν καταγραφεί στο Δέλτα Έβρου;" TextWrapping="Wrap" />
+                                </RadioButtons.Header>
                                 <RadioButton x:Name="question_2_radio1_answer1" Content="28" />
                                 <RadioButton x:Name="question_2_radio1_answer2" Content="40" />
                                 <RadioButton x:Name="question_2_radio1_answer3" Content="15" />
                             </RadioButtons>
-                            <RadioButtons x:Name="question_2_radio_2" Header="Ποιο από τα παρακάτω φυτά εμφανίζεται συχνά στις ακτές και τις αμμονησίδες του Δέλτα;" MaxColumns="3" Visibility="Collapsed" >
+                            <RadioButtons x:Name="question_2_radio_2" MaxColumns="3" Visibility="Collapsed" >
+                                <RadioButtons.Header>
+                                    <TextBlock Text="Ποιο από τα παρακάτω φυτά εμφανίζεται συχνά στις ακτές και τις αμμονησίδες του Δέλτα;" TextWrapping="Wrap" />
+                                </RadioButtons.Header>
                                 <RadioButton x:Name="question_2_radio2_answer1" Content="Πλατάνι" />
                                 <RadioButton x:Name="question_2_radio2_answer2" Content="Ορχιδέα" />
                                 <RadioButton x:Name="question_2_radio2_answer3" Content="Κρίνο της θάλασσας" />
@@ -86,17 +95,26 @@
                     <TextBlock Text="3." FontSize="50" FontWeight="SemiBold" HorizontalAlignment="Center" VerticalAlignment="Center" Width="50" Margin="0, 0, 20, 0" />
                     <Border Grid.Column="1" CornerRadius="12" BorderThickness="1" BorderBrush="Aquamarine" Padding="15" Background="AliceBlue">
                         <StackPanel>
-                            <RadioButtons x:Name="question_3_radio_1" Header="Ποιο από τα παρακάτω θηλαστικά ζει στο Δέλτα του Έβρου;" MaxColumns="3" Visibility="Collapsed">
+                            <RadioButtons x:Name="question_3_radio_1" MaxColumns="3" Visibility="Collapsed">
+                                <RadioButtons.Header>
+                                    <TextBlock Text="Ποιο από τα παρακάτω θηλαστικά ζει στο Δέλτα του Έβρου;" TextWrapping="Wrap" />
+                                </RadioButtons.Header>
                                 <RadioButton x:Name="question_3_radio1_answer1" Content="Νυφίτσα" />
                                 <RadioButton x:Name="question_3_radio1_answer2" Content="Λύκος" />
                                 <RadioButton x:Name="question_3_radio1_answer3" Content="Καφέ λαγός" />
                             </RadioButtons>
-                            <RadioButtons x:Name="question_3_radio_2" Header="Ποιο από τα παρακάτω ψάρια ζει σε αλμυρό νερό στο Δέλτα του Έβρου;" MaxColumns="3" Visibility="Collapsed">
+                            <RadioButtons x:Name="question_3_radio_2" MaxColumns="3" Visibility="Collapsed">
+                                <RadioButtons.Header>
+                                    <TextBlock Text="Ποιο από τα παρακάτω ψάρια ζει σε αλμυρό νερό στο Δέλτα του Έβρου;" TextWrapping="Wrap" />
+                                </RadioButtons.Header>
                                 <RadioButton x:Name="question_3_radio2_answer1" Content="Τούρνα" />
                                 <RadioButton x:Name="question_3_radio2_answer2" Content="Χέλι" />
                                 <RadioButton x:Name="question_3_radio2_answer3" Content="Γουλιανός" />
                             </RadioButtons>
-                            <RadioButtons x:Name="question_3_radio_3" Header="Ποιος από τους παρακάτω συνδυασμούς χλωρίδας απαντάται σωστά σε σχέση με τον βιότοπο όπου φύεται στο Δέλτα του Έβρου;" MaxColumns="3" Visibility="Collapsed">
+                            <RadioButtons x:Name="question_3_radio_3" MaxColumns="3" Visibility="Collapsed">
+                                <RadioButtons.Header>
+                                    <TextBlock Text="Ποιος από τους παρακάτω συνδυασμούς χλωρίδας απαντάται σωστά σε σχέση με τον βιότοπο όπου φύεται στο Δέλτα του Έβρου;" TextWrapping="Wrap" />
+                                </RadioButtons.Header>
                                 <RadioButton x:Name="question_3_radio3_answer1" Content="Νούφαρο – Κανάλια" />
                                 <RadioButton x:Name="question_3_radio3_answer2" Content="Ιτιά – Ακτές και αμμονησίδες" />
                                 <RadioButton x:Name="question_3_radio3_answer3" Content="Ορχιδέα – Κανάλια" />
@@ -126,7 +144,7 @@
                     <TextBlock x:Name="question_number" Text="1" FontSize="20" FontWeight="SemiBold" Margin="10, 0, 0, 0" />
                     <TextBlock Text="/3" FontSize="20" FontWeight="SemiBold"/>
                 </StackPanel>
-                <TextBlock Text="Επέλεξε απάντηση και πάτησε το κουμπί για να συνεχίσεις" HorizontalAlignment="Center"/>
+                <TextBlock Text="Επέλεξε απάντηση και πάτησε το κουμπί για να συνεχίσεις" HorizontalAlignment="Center" TextAlignment="Center" TextWrapping="WrapWholeWords"/>
             </StackPanel>
 
             <Button x:Name="NextButton" Grid.Column="1" VerticalAlignment="Bottom" Content="Επόμενη" Style="{StaticResource AccentButtonStyle}" Width="170" Click="Next_step"  />

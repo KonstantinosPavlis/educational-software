@@ -46,9 +46,9 @@
                         <Border Grid.Column="1" CornerRadius="12" BorderThickness="1" BorderBrush="YellowGreen" Padding="15" Background="LightGoldenrodYellow" MinHeight="140">
 
                             <StackPanel Spacing="5" HorizontalAlignment="Center" VerticalAlignment="Center">
-                                <TextBlock Text="Ερώτηση Πολλαπλής Επιλογής" FontWeight="SemiBold" FontSize="16" Margin="0, 0, 0, 8" HorizontalAlignment="Center"/>
+                                <TextBlock Text="Ερώτηση Πολλαπλής Επιλογής" FontWeight="SemiBold" FontSize="16" Margin="0, 0, 0, 8" HorizontalAlignment="Center" TextAlignment="Center" TextWrapping="WrapWholeWords"/>
                                 <StackPanel x:Name="question_1_1" Visibility="Visible">
-                                    <TextBlock Text="Πόσες λευκές αναλαμπές σημειώνει ο φάρος κάθε 15 δευτερόλεπτα;" HorizontalAlignment="Center"/>
+                                    <TextBlock Text="Πόσες λευκές αναλαμπές σημειώνει ο φάρος κάθε 15 δευτερόλεπτα;" HorizontalAlignment="Center" TextAlignment="Center" TextWrapping="WrapWholeWords"/>
                                     <RadioButtons x:Name="question_1_1_radio" MaxColumns="4" HorizontalAlignment="Center" >
                                         <RadioButton x:Name="question_1_1_radio_answer1" Content="Δύο" />
                                         <RadioButton x:Name="question_1_1_radio_answer2" Content="Πέντε" />
@@ -57,7 +57,7 @@
                                     </RadioButtons>
                                 </StackPanel>
                                 <StackPanel x:Name="question_1_2" Visibility="Collapsed">
-                                    <TextBlock Text="Πού βρίσκεται ο φάρος της Αλεξανδρούπολης;" HorizontalAlignment="Center"/>
+                                    <TextBlock Text="Πού βρίσκεται ο φάρος της Αλεξανδρούπολης;" HorizontalAlignment="Center" TextAlignment="Center" TextWrapping="WrapWholeWords"/>
                                     <RadioButtons x:Name="question_1_2_radio" MaxColumns="4" HorizontalAlignment="Center" >
                                         <RadioButton x:Name="question_1_2_radio_answer1" Content="Λόφος" />
                                         <RadioButton x:Name="question_1_2_radio_answer2" Content="Παραλία" />
@@ -80,10 +80,10 @@
                         <Border Grid.Column="1" CornerRadius="12" BorderThickness="1" BorderBrush="YellowGreen" Padding="15" Background="LightGoldenrodYellow" MinHeight="140">
 
                             <StackPanel Spacing="5" HorizontalAlignment="Center" VerticalAlignment="Center">
-                                <TextBlock Text="Ερώτηση Σωστού/Λάθους" FontWeight="SemiBold" FontSize="16" Margin="0, 0, 0, 8" HorizontalAlignment="Center"/>
+                                <TextBlock Text="Ερώτηση Σωστού/Λάθους" FontWeight="SemiBold" FontSize="16" Margin="0, 0, 0, 8" HorizontalAlignment="Center" TextAlignment="Center" TextWrapping="WrapWholeWords"/>
                                 <StackPanel HorizontalAlignment="Center">
-                                    <TextBlock x:Name="question_2_1_text"  Text="Ο φάρος διαθέτει εφεδρικές φιάλες με ασετιλίνη για διακοπή ρεύματος." HorizontalAlignment="Center" Visibility="Visible"/>
-                                    <TextBlock x:Name="question_2_2_text"  Text="Ο φάρος της Αλεξανδρούπολης λειτούργησε για πρώτη φορά το 1850." HorizontalAlignment="Center" Visibility="Collapsed"/>
+                                    <TextBlock x:Name="question_2_1_text"  Text="Ο φάρος διαθέτει εφεδρικές φιάλες με ασετιλίνη για διακοπή ρεύματος." HorizontalAlignment="Center" Visibility="Visible" TextAlignment="Center" TextWrapping="WrapWholeWords"/>
+                                    <TextBlock x:Name="question_2_2_text"  Text="Ο φάρος της Αλεξανδρούπολης λειτούργησε για πρώτη φορά το 1850." HorizontalAlignment="Center" Visibility="Collapsed" TextAlignment="Center" TextWrapping="WrapWholeWords"/>
                                 </StackPanel>
                                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                                     <CheckBox x:Name="PositiveAnswer_checkbox" Content="Ναι" Checked="PositiveAnswer_checkbox_checked" Width="Auto" />
@@ -104,7 +104,7 @@
                         <Border Grid.Column="1" CornerRadius="12" BorderThickness="1" BorderBrush="YellowGreen" Padding="15" Background="LightGoldenrodYellow" MinHeight="140">
 
                             <StackPanel Spacing="0" HorizontalAlignment="Center" VerticalAlignment="Center">
-                                <TextBlock Text="Ερώτηση Συμπλήρωσης Κενού" FontWeight="SemiBold" FontSize="16" Margin="0, 0, 0, 8" HorizontalAlignment="Center"/>
+                                <TextBlock Text="Ερώτηση Συμπλήρωσης Κενού" FontWeight="SemiBold" FontSize="16" Margin="0, 0, 0, 8" HorizontalAlignment="Center" TextAlignment="Center" TextWrapping="WrapWholeWords"/>
 
                                 <ScrollViewer ZoomMode="Disabled"
                             IsTabStop="True" IsVerticalScrollChainingEnabled="True"  

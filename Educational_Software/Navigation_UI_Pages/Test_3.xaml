@@ -21,7 +21,7 @@
                 <FontIcon Glyph="&#xEE56;" FontSize="42"/>
                 <TextBlock Text="Τεστ 3ης Ενότητας" FontSize="25" FontWeight="SemiBold" VerticalAlignment="Center"/>
             </StackPanel>
-            <TextBlock Text="Ερωτήσεις για την Ενότητα 3 και όλες τις προηγούμενες ενότητες" FontSize="16" FontWeight="SemiBold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <TextBlock Text="Ερωτήσεις για την Ενότητα 3 και όλες τις προηγούμενες ενότητες" FontSize="16" FontWeight="SemiBold" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center" TextWrapping="WrapWholeWords"/>
         </StackPanel>
 
         <ScrollViewer Grid.Row="1" ZoomMode="Disabled"
@@ -45,9 +45,9 @@
                         <Border Grid.Column="1" CornerRadius="12" BorderThickness="1" BorderBrush="YellowGreen" Padding="15" Background="LightGoldenrodYellow" MinHeight="140">
 
                             <StackPanel Spacing="5" HorizontalAlignment="Center" VerticalAlignment="Center">
-                                <TextBlock Text="Ερώτηση Πολλαπλής Επιλογής" FontWeight="SemiBold" FontSize="16" Margin="0, 0, 0, 8" HorizontalAlignment="Center"/>
+                                <TextBlock Text="Ερώτηση Πολλαπλής Επιλογής" FontWeight="SemiBold" FontSize="16" Margin="0, 0, 0, 8" HorizontalAlignment="Center" TextAlignment="Center" TextWrapping="WrapWholeWords"/>
                                 <StackPanel x:Name="question_1_1" Visibility="Visible">
-                                    <TextBlock Text="Πότε χτίστηκε το Καπνομάγαζο της Αλεξανδρούπολης;" HorizontalAlignment="Center"/>
+                                    <TextBlock Text="Πότε χτίστηκε το Καπνομάγαζο της Αλεξανδρούπολης;" HorizontalAlignment="Center" TextAlignment="Center" TextWrapping="WrapWholeWords"/>
                                     <RadioButtons x:Name="question_1_1_radio" MaxColumns="4" HorizontalAlignment="Center" >
                                         <RadioButton x:Name="question_1_1_radio_answer1" Content="1992" />
                                         <RadioButton x:Name="question_1_1_radio_answer2" Content="1822" />
@@ -56,7 +56,7 @@
                                     </RadioButtons>
                                 </StackPanel>
                                 <StackPanel x:Name="question_1_2" Visibility="Collapsed">
-                                    <TextBlock Text="Ποια ήταν η πρώτη χρήση του Καπνομάγαζου;" HorizontalAlignment="Center"/>
+                                    <TextBlock Text="Ποια ήταν η πρώτη χρήση του Καπνομάγαζου;" HorizontalAlignment="Center" TextAlignment="Center" TextWrapping="WrapWholeWords"/>
                                     <RadioButtons x:Name="question_1_2_radio" MaxColumns="4" HorizontalAlignment="Center" >
                                         <RadioButton x:Name="question_1_2_radio_answer1" Content="Καπνός" />
                                         <RadioButton x:Name="question_1_2_radio_answer2" Content="Σχολείο" />
@@ -79,10 +79,10 @@
                         <Border Grid.Column="1" CornerRadius="12" BorderThickness="1" BorderBrush="YellowGreen" Padding="15" Background="LightGoldenrodYellow" MinHeight="140">
 
                             <StackPanel Spacing="5" HorizontalAlignment="Center" VerticalAlignment="Center">
-                                <TextBlock Text="Ερώτηση Σωστού/Λάθους" FontWeight="SemiBold" FontSize="16" Margin="0, 0, 0, 8" HorizontalAlignment="Center"/>
+                                <TextBlock Text="Ερώτηση Σωστού/Λάθους" FontWeight="SemiBold" FontSize="16" Margin="0, 0, 0, 8" HorizontalAlignment="Center" TextAlignment="Center" TextWrapping="WrapWholeWords"/>
                                 <StackPanel HorizontalAlignment="Center">
-                                    <TextBlock x:Name="question_2_1_text"  Text="Στο Δέλτα δεν συναντώνται είδη ψαριών που ζουν σε αλμυρό νερό." HorizontalAlignment="Center" Visibility="Visible"/>
-                                    <TextBlock x:Name="question_2_2_text"  Text="Στο Δέλτα Έβρου έχουν καταγραφεί πάνω από 300 είδη φυτών." HorizontalAlignment="Center" Visibility="Collapsed"/>
+                                    <TextBlock x:Name="question_2_1_text"  Text="Στο Δέλτα δεν συναντώνται είδη ψαριών που ζουν σε αλμυρό νερό." HorizontalAlignment="Center" Visibility="Visible" TextAlignment="Center" TextWrapping="WrapWholeWords"/>
+                                    <TextBlock x:Name="question_2_2_text"  Text="Στο Δέλτα Έβρου έχουν καταγραφεί πάνω από 300 είδη φυτών." HorizontalAlignment="Center" Visibility="Collapsed" TextAlignment="Center" TextWrapping="WrapWholeWords"/>
                                 </StackPanel>
                                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                                     <CheckBox x:Name="PositiveAnswer_checkbox" Content="Ναι" Checked="PositiveAnswer_checkbox_checked" Width="Auto" />
@@ -103,7 +103,7 @@
                         <Border Grid.Column="1" CornerRadius="12" BorderThickness="1" BorderBrush="YellowGreen" Padding="15" Background="LightGoldenrodYellow" MinHeight="140">
 
                             <StackPanel Spacing="0" HorizontalAlignment="Center" VerticalAlignment="Center">
-                                <TextBlock Text="Ερώτηση Συμπλήρωσης Κενού" FontWeight="SemiBold" FontSize="16" Margin="0, 0, 0, 8" HorizontalAlignment="Center"/>
+                                <TextBlock Text="Ερώτηση Συμπλήρωσης Κενού" FontWeight="SemiBold" FontSize="16" Margin="0, 0, 0, 8" HorizontalAlignment="Center" TextAlignment="Center" TextWrapping="WrapWholeWords"/>
 
                                 <ScrollViewer ZoomMode="Disabled"
                             IsTabStop="True" IsVerticalScrollChainingEnabled="True"  
@@ -163,7 +163,7 @@
             </Grid.ColumnDefinitions>
 
 
-            <TextBlock x:Name="Bottom_Text" Text="Πάτησε το κουμπί ώστε να ελεγχθεί η ορθότητα των απαντήσεων" FontWeight="SemiBold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <TextBlock x:Name="Bottom_Text" Text="Πάτησε το κουμπί ώστε να ελεγχθεί η ορθότητα των απαντήσεων" FontWeight="SemiBold" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center" TextWrapping="WrapWholeWords"/>
 
             <Button x:Name="completion_button" Grid.Column="1" VerticalAlignment="Bottom" Content="Ολοκλήρωση" Style="{StaticResource AccentButtonStyle}" Width="180"  Click="Complete_button_Click"/>
         </Grid>
