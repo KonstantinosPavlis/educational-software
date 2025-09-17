@@ -15,7 +15,7 @@ _Exploration of Alexandroupolis_ is a digital learning experience that guides us
 
 The app encourages active participation through quizzes and unlockable tests, rewarding users for correct answers and progress.
 
-> 📌 The `resources` folder contains supporting material such as screenshots.
+> 📌 The **`resources`** folder contains supporting material such as screenshots.
 
 ## ✨ Features
 
