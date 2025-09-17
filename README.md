@@ -80,7 +80,7 @@ Follow these steps to install and run the application:
 
 **_Demo Video:_**
 
-> [📽️ Watch the Demo Video](/project_resources/media/Demo_Video.mp4)
+> https://github.com/user-attachments/assets/d6803f8a-5a50-40a2-bca3-78b7a9975674
 
 # 🔒 Code Ownership & Usage Terms
 
