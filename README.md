@@ -71,12 +71,12 @@ Follow these steps to install and run the application:
 ## 📷 Screenshots / Video
 
 **_App Screens:_**  
-> <img width="250" height="160" alt="Edu_Soft_1" src="https://github.com/user-attachments/assets/402e869c-a1c3-486e-bbde-8c784005dee2" />
-> <img width="250" height="160" alt="Edu_Soft_2" src="https://github.com/user-attachments/assets/24a95101-96ca-4f81-803d-8b15dc06f12e" />
-> <img width="250" height="160" alt="Edu_Soft_3" src="https://github.com/user-attachments/assets/b8c7b131-bebb-494c-84a4-91a550357f6f" />
-> <img width="250" height="160" alt="Edu_Soft_4" src="https://github.com/user-attachments/assets/649c353e-96f5-4e94-8a51-d8813fd71bc3" />
-> <img width="250" height="160" alt="Edu_Soft_5" src="https://github.com/user-attachments/assets/e1801184-c698-4438-9c33-f733a6f95525" />
-> <img width="250" height="160" alt="Edu_Soft_6" src="https://github.com/user-attachments/assets/fb1d5231-7fcc-4840-97b3-7eb1fa10c0f5" />
+> <img width="250" height="160" alt="Edu_Soft_1" src="/project_resources/media/Edu_Soft_1.png" />
+> <img width="250" height="160" alt="Edu_Soft_2" src="/project_resources/media/Edu_Soft_2.png" />
+> <img width="250" height="160" alt="Edu_Soft_3" src="/project_resources/media/Edu_Soft_3.png" />
+> <img width="250" height="160" alt="Edu_Soft_4" src="/project_resources/media/Edu_Soft_4.png" />
+> <img width="250" height="160" alt="Edu_Soft_5" src="/project_resources/media/Edu_Soft_5.png" />
+> <img width="250" height="160" alt="Edu_Soft_6" src="/project_resources/media/Edu_Soft_6.png" />
 
 **_Demo Video:_**
 
