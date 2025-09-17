@@ -15,6 +15,8 @@ _Exploration of Alexandroupolis_ is a digital learning experience that guides us
 
 The app encourages active participation through quizzes and unlockable tests, rewarding users for correct answers and progress.
 
+> 📌 The `resources` folder contains supporting material such as screenshots.
+
 ## ✨ Features
 
 - 🔐 User registration and login system  
@@ -71,12 +73,12 @@ Follow these steps to install and run the application:
 ## 📷 Screenshots / Video
 
 **_App Screens:_**  
-> <img width="250" height="160" alt="Edu_Soft_1" src="/project_resources/media/Edu_Soft_1.png" />
-> <img width="250" height="160" alt="Edu_Soft_2" src="/project_resources/media/Edu_Soft_2.png" />
-> <img width="250" height="160" alt="Edu_Soft_3" src="/project_resources/media/Edu_Soft_3.png" />
-> <img width="250" height="160" alt="Edu_Soft_4" src="/project_resources/media/Edu_Soft_4.png" />
-> <img width="250" height="160" alt="Edu_Soft_5" src="/project_resources/media/Edu_Soft_5.png" />
-> <img width="250" height="160" alt="Edu_Soft_6" src="/project_resources/media/Edu_Soft_6.png" />
+> <img width="250" height="160" alt="Edu_Soft_1" src="/resources/screenshots/login_register_screen.png" />
+> <img width="250" height="160" alt="Edu_Soft_2" src="/resources/screenshots/welcome_screen.png" />
+> <img width="250" height="160" alt="Edu_Soft_3" src="/resources/screenshots/unit_test.png" />
+> <img width="250" height="160" alt="Edu_Soft_4" src="/resources/screenshots/educational_content.png" />
+> <img width="250" height="160" alt="Edu_Soft_5" src="/resources/screenshots/unit_quiz.png" />
+> <img width="250" height="160" alt="Edu_Soft_6" src="/resources/screenshots/user_statistics.png" />
 
 **_Demo Video:_**
 
